@@ -3,61 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Brand Matrix - Твой SMM-Стратег</title>
+    <title>AI FamLab - Закрытый клуб для изучения AI</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Секция 1: Hero Screen с AI-персонажем -->
     <section id="screen1" class="full-screen-section">
         <div class="particles-bg"></div>
         <div class="hero-content">
-            <div class="ai-character">
-                <div class="ai-avatar">
-                    <div class="ai-face">
-                        <div class="ai-eye left"></div>
-                        <div class="ai-eye right"></div>
-                        <div class="ai-mouth"></div>
-                    </div>
-                    <div class="ai-glow"></div>
+            <div class="founder-character">
+                <div class="founder-photo">
+                    <img src="assets/images/alexey-founder.svg" alt="Алексей - основатель AI FamLab" class="founder-image">
+                    <div class="founder-glow"></div>
                 </div>
                 <div class="speech-bubble">
-                    <span id="ai-text">Привет! Я твой AI-помощник</span>
+                    <span id="founder-text">Привет! Я Алексей. Рад видеть тебя здесь.</span>
                 </div>
             </div>
             
             <h1 class="hero-title">
-                <span class="word">ТВОЙ</span>
-                <span class="word accent">SMM-СТРАТЕГ,</span>
-                <span class="word">КОТОРЫЙ</span>
-                <span class="word glow">НЕ СПИТ</span>
+                <span class="word">ХВАТИТ</span>
+                <span class="word">СОХРАНЯТЬ,</span>
+                <span class="word accent">ПОРА</span>
+                <span class="word accent">ВНЕДРЯТЬ.</span>
+                <span class="word">ПЕРЕСТАНЬ</span>
+                <span class="word">БЫТЬ</span>
+                <span class="word glow">ЗРИТЕЛЕМ.</span>
             </h1>
             
             <p class="hero-subtitle">
-                Создай контент-матрицу для любого бренда за 
-                <span class="highlight">12 минут</span> 
-                с помощью AI Brand Matrix
+                AI FamLab — это закрытый клуб для тех, кто устал от инфошума. 
+                Здесь мы вместе проходим путь от "что это за нейронка?" до создания AI-помощников 
+                и автоматизации рутины. Без воды и снобизма.
             </p>
             
             <div class="hero-stats">
                 <div class="stat-item">
-                    <div class="stat-number" data-target="2847">0</div>
-                    <div class="stat-label">Довольных клиентов</div>
+                    <div class="stat-number" data-target="124">0</div>
+                    <div class="stat-label">Резидентов в FamLab</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number" data-target="156">0</div>
-                    <div class="stat-label">Брендов проанализировано</div>
+                    <div class="stat-number" data-target="289">0</div>
+                    <div class="stat-label">Полезных гайдов и фишек</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number" data-target="12">0</div>
-                    <div class="stat-label">Минут на анализ</div>
+                    <div class="stat-number" data-target="17">0</div>
+                    <div class="stat-label">Совместных проектов</div>
                 </div>
             </div>
             
-            <a href="#screen2" class="cta-button hero-cta">
-                <span>Увидеть магию</span>
+            <a href="#screen3" class="cta-button hero-cta">
+                <span>СТАТЬ ЧАСТЬЮ КЛУБА</span>
                 <div class="button-particles"></div>
-                <i class="fas fa-rocket"></i>
+                <i class="fas fa-users"></i>
             </a>
         </div>
         
@@ -72,25 +71,33 @@
         <div class="neural-bg"></div>
         
         <h2 class="section-title">
-            <span class="title-part">Всего</span>
-            <span class="title-part highlight">3 шага.</span>
-            <span class="title-part">Никакой магии,</span>
-            <span class="title-part accent">только технология.</span>
+            <span class="title-part">ГЕНЕРАТОР</span>
+            <span class="title-part accent">ИДЕЙ</span>
+            <span class="title-part">FAMLAB</span>
+            <span class="title-part highlight">В ДЕЙСТВИИ</span>
         </h2>
         
-        <!-- Мини-игра: симуляция работы AI -->
-        <div class="ai-simulation-game">
-            <div class="game-header">
-                <h3>🎮 Попробуй сам! Симуляция AI-анализа</h3>
-                <button id="start-simulation" class="game-button">Запустить анализ</button>
+        <!-- Генератор идей FamLab -->
+        <div class="famlab-idea-generator">
+            <div class="generator-header">
+                <h3>💡 Попробуй генератор идей FamLab прямо сейчас!</h3>
+                <p>Выбери категорию и получи конкретные, практические идеи для внедрения AI</p>
             </div>
             
-            <div class="simulation-container">
-                <div class="input-section">
-                    <input type="text" id="brand-url" placeholder="Введи URL бренда (например: apple.com)" class="brand-input">
-                    <button id="analyze-btn" class="analyze-button" disabled>
-                        <i class="fas fa-search"></i>
-                        Анализировать
+            <div class="generator-container">
+                <div class="category-selection">
+                    <select id="category-select" class="category-dropdown">
+                        <option value="">Выбери интересную тебе область...</option>
+                        <option value="automation">🤖 Автоматизация рутины</option>
+                        <option value="content">📝 AI в создании контента</option>
+                        <option value="analysis">📊 Анализ данных с AI</option>
+                        <option value="coding">💻 AI-помощники в программировании</option>
+                        <option value="business">💼 AI для бизнес-процессов</option>
+                        <option value="learning">🎓 Обучение с AI-тренерами</option>
+                    </select>
+                    <button id="generate-btn" class="generate-button" disabled>
+                        <i class="fas fa-lightbulb"></i>
+                        Генерировать идеи
                     </button>
                 </div>
                 
@@ -102,34 +109,34 @@
                         <div class="brain-node"></div>
                         <div class="brain-connections"></div>
                     </div>
-                    <div class="processing-text">Анализирую бренд...</div>
+                    <div class="processing-text">Генерирую идеи для тебя...</div>
                 </div>
                 
                 <div class="results-section" id="results">
                     <div class="result-card">
-                        <h4>🎯 Целевая аудитория</h4>
-                        <p id="audience-result">Молодые профессионалы 25-35 лет</p>
+                        <h4>🎯 Идея для старта</h4>
+                        <p id="idea-start">Начни с простого AI-чат-бота для FAQ</p>
                     </div>
                     <div class="result-card">
-                        <h4>🗣️ Tone of Voice</h4>
-                        <p id="tone-result">Дружелюбный, профессиональный, инновационный</p>
+                        <h4>🛠️ Инструменты</h4>
+                        <p id="idea-tools">ChatGPT + Zapier для автоматизации</p>
                     </div>
                     <div class="result-card">
-                        <h4>📝 Контент-идеи</h4>
-                        <p id="content-result">15 готовых идей для постов</p>
+                        <h4>🎓 Следующий шаг</h4>
+                        <p id="idea-next">Изучи промпт-инжиниринг в FamLab</p>
                     </div>
                 </div>
             </div>
         </div>
         
-        <!-- Традиционные шаги процесса -->
+        <!-- Шаги изучения AI в FamLab -->
         <div class="demo-pipeline">
             <div class="pipeline-step" data-step="1">
                 <div class="step-icon">
-                    <i class="fas fa-link"></i>
+                    <i class="fas fa-user-plus"></i>
                 </div>
-                <h3>Вводные данные</h3>
-                <p>Вставляешь ссылку на сайт клиента</p>
+                <h3>Присоединяешься</h3>
+                <p>Вступаешь в закрытое сообщество FamLab</p>
             </div>
             
             <div class="pipeline-arrow">
@@ -139,10 +146,10 @@
             
             <div class="pipeline-step" data-step="2">
                 <div class="step-icon">
-                    <i class="fas fa-brain"></i>
+                    <i class="fas fa-hands-helping"></i>
                 </div>
-                <h3>AI-анализ</h3>
-                <p>Наша матрица анализирует бренд</p>
+                <h3>Изучаешь и практикуешься</h3>
+                <p>Получаешь знания и сразу внедряешь их</p>
             </div>
             
             <div class="pipeline-arrow">
@@ -152,10 +159,10 @@
             
             <div class="pipeline-step" data-step="3">
                 <div class="step-icon">
-                    <i class="fas fa-magic"></i>
+                    <i class="fas fa-rocket"></i>
                 </div>
                 <h3>Результат</h3>
-                <p>Получаешь готовую стратегию</p>
+                <p>Становишься экспертом по AI-автоматизации</p>
             </div>
         </div>
     </section>
@@ -165,48 +172,48 @@
         <div class="offer-container">
             <div class="features-showcase">
                 <h3 class="features-title">
-                    <i class="fas fa-gift"></i>
-                    Что ты получаешь:
+                    <i class="fas fa-users"></i>
+                    В AI FamLab тебя ждет:
                 </h3>
                 
                 <div class="features-grid">
                     <div class="feature-item" data-delay="0">
                         <div class="feature-icon">
-                            <i class="fas fa-microphone-alt"></i>
+                            <i class="fas fa-graduation-cap"></i>
                         </div>
                         <div class="feature-content">
-                            <h4>Готовый Tone of Voice</h4>
-                            <p>Уникальный голос бренда для всех платформ</p>
+                            <h4>Практические курсы и гайды</h4>
+                            <p>Пошаговые инструкции по внедрению AI в твоей работе</p>
                         </div>
                     </div>
                     
                     <div class="feature-item" data-delay="150">
                         <div class="feature-icon">
-                            <i class="fas fa-calendar-alt"></i>
+                            <i class="fas fa-comments"></i>
                         </div>
                         <div class="feature-content">
-                            <h4>Контент-план на 30 дней</h4>
-                            <p>Готовые идеи для постов на месяц вперед</p>
+                            <h4>Закрытое сообщество экспертов</h4>
+                            <p>Общение с единомышленниками и получение фидбека</p>
                         </div>
                     </div>
                     
                     <div class="feature-item" data-delay="300">
                         <div class="feature-icon">
-                            <i class="fas fa-users"></i>
+                            <i class="fas fa-tools"></i>
                         </div>
                         <div class="feature-content">
-                            <h4>Анализ целевой аудитории</h4>
-                            <p>Детальный портрет твоих клиентов</p>
+                            <h4>Готовые AI-инструменты и шаблоны</h4>
+                            <p>Проверенные решения для автоматизации</p>
                         </div>
                     </div>
                     
                     <div class="feature-item" data-delay="450">
                         <div class="feature-icon">
-                            <i class="fas fa-infinity"></i>
+                            <i class="fas fa-handshake"></i>
                         </div>
                         <div class="feature-content">
-                            <h4>Пожизненный доступ</h4>
-                            <p>Используй AI-шаблон без ограничений</p>
+                            <h4>Персональная поддержка</h4>
+                            <p>Помощь в решении конкретных задач и проектов</p>
                         </div>
                     </div>
                 </div>
@@ -215,8 +222,8 @@
             <div class="pricing-section">
                 <div class="pricing-card">
                     <div class="card-header">
-                        <h4>AI Brand Matrix</h4>
-                        <div class="premium-badge">Premium</div>
+                        <h4>AI FamLab Pass</h4>
+                        <div class="premium-badge">Резидент</div>
                     </div>
                     
                     <div class="price-display">
@@ -234,9 +241,9 @@
                     </div>
                     
                     <div class="price-benefits">
-                        <div class="benefit">✨ Единоразовый платеж</div>
-                        <div class="benefit">🔒 Пожизненный доступ</div>
-                        <div class="benefit">⚡ Мгновенное получение</div>
+                        <div class="benefit">🎓 Доступ ко всем курсам и материалам</div>
+                        <div class="benefit">💬 Участие в закрытом сообществе</div>
+                        <div class="benefit">🚀 Мгновенный старт обучения</div>
                     </div>
                     
                     <div class="urgency-timer">
@@ -258,14 +265,14 @@
                     </div>
                     
                     <a href="#" class="cta-button final-cta" id="purchase-btn">
-                        <span class="btn-text">ПОЛУЧИТЬ ДОСТУП СЕЙЧАС</span>
+                        <span class="btn-text">СТАТЬ РЕЗИДЕНТОМ FAMLAB</span>
                         <div class="btn-glow"></div>
-                        <i class="fas fa-crown"></i>
+                        <i class="fas fa-key"></i>
                     </a>
                     
                     <div class="guarantee">
                         <i class="fas fa-shield-alt"></i>
-                        Гарантия возврата денег 30 дней
+                        Гарантия качества обучения 30 дней
                     </div>
                 </div>
             </div>
@@ -274,19 +281,19 @@
         <div class="social-proof">
             <div class="testimonials">
                 <div class="testimonial active">
-                    <div class="avatar">👨‍💼</div>
-                    <p>"За 12 минут получил стратегию, на которую обычно трачу целый день!"</p>
-                    <cite>— Алексей, SMM-менеджер</cite>
+                    <div class="avatar">👨‍💻</div>
+                    <p>"Наконец-то разобрался, как внедрить AI в свою работу. За месяц автоматизировал 80% рутины!"</p>
+                    <cite>— Максим, резидент FamLab</cite>
                 </div>
                 <div class="testimonial">
-                    <div class="avatar">👩‍💻</div>
-                    <p>"Клиенты в восторге от качества контента. Заказы выросли на 300%"</p>
-                    <cite>— Мария, маркетолог</cite>
+                    <div class="avatar">👩‍🎓</div>
+                    <p>"В FamLab я получила не только знания, но и реальные инструменты. Теперь AI — мой главный помощник."</p>
+                    <cite>— Анна, участница сообщества</cite>
                 </div>
                 <div class="testimonial">
                     <div class="avatar">🧑‍🚀</div>
-                    <p>"Лучший инструмент для анализа брендов. Экономлю по 10 часов в неделю"</p>
-                    <cite>— Дмитрий, основатель агентства</cite>
+                    <p>"Лучшее место для изучения AI. Без воды, только практика. Сэкономил уже сотни часов!"</p>
+                    <cite>— Игорь, эксперт FamLab</cite>
                 </div>
             </div>
         </div>
@@ -294,13 +301,13 @@
 
     <style>
         :root {
-            --main-bg: #0B0B0F;
+            --main-bg: #0D0D0F;
             --card-bg: rgba(26, 26, 31, 0.8);
             --accent-color: #00FF88;
             --accent-hover: #00DD77;
             --accent-secondary: #FF6B6B;
-            --main-text: #FFFFFF;
-            --secondary-text: #B0B0B0;
+            --main-text: #EAEAEA;
+            --secondary-text: #A0A0A0;
             --border-color: rgba(255, 255, 255, 0.1);
             --main-font: 'Inter', sans-serif;
             --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -364,66 +371,48 @@
             z-index: 10;
         }
 
-        .ai-character {
+        .founder-character {
             margin-bottom: 3rem;
             position: relative;
         }
 
-        .ai-avatar {
-            width: 120px;
-            height: 120px;
+        .founder-photo {
+            width: 160px;
+            height: 160px;
             margin: 0 auto 1rem;
             position: relative;
             animation: float 3s ease-in-out infinite;
         }
 
-        .ai-face {
+        .founder-image {
             width: 100%;
             height: 100%;
-            background: var(--gradient-primary);
             border-radius: 50%;
-            position: relative;
+            object-fit: cover;
             border: 3px solid var(--accent-color);
             box-shadow: var(--shadow-glow);
+            transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+            opacity: 0;
+            transform: translateY(50px);
         }
 
-        .ai-eye {
-            width: 12px;
-            height: 12px;
-            background: var(--accent-color);
+        .founder-image.loaded {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .founder-glow {
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: radial-gradient(circle, var(--accent-color) 0%, transparent 70%);
             border-radius: 50%;
-            position: absolute;
-            top: 35%;
-            animation: blink 4s infinite;
-        }
-
-        .ai-eye.left { left: 30%; }
-        .ai-eye.right { right: 30%; }
-
-        .ai-mouth {
-            width: 30px;
-            height: 15px;
-            border: 2px solid var(--accent-color);
-            border-top: none;
-            border-radius: 0 0 30px 30px;
-            position: absolute;
-            bottom: 30%;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: talk 2s ease-in-out infinite;
-        }
-
-        .ai-glow {
-            position: absolute;
-            top: -10px;
-            left: -10px;
-            right: -10px;
-            bottom: -10px;
-            border-radius: 50%;
-            background: var(--gradient-primary);
             opacity: 0.3;
-            animation: pulse 2s ease-in-out infinite;
+            animation: pulse 2s infinite;
         }
+
 
         .speech-bubble {
             background: var(--card-bg);
@@ -642,68 +631,66 @@
             color: var(--accent-secondary);
         }
 
-        .ai-simulation-game {
+        .famlab-idea-generator {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 20px;
             padding: 2rem;
             margin-bottom: 4rem;
             backdrop-filter: blur(10px);
-            max-width: 800px;
+            max-width: 900px;
             width: 100%;
             z-index: 10;
         }
 
-        .game-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .generator-header {
+            text-align: center;
             margin-bottom: 2rem;
         }
 
-        .game-header h3 {
-            font-size: 1.5rem;
+        .generator-header h3 {
+            font-size: 1.8rem;
             color: var(--accent-color);
+            margin-bottom: 1rem;
         }
 
-        .game-button {
-            background: var(--gradient-primary);
-            color: white;
-            border: none;
-            padding: 0.8rem 1.5rem;
-            border-radius: 25px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: transform 0.3s ease;
+        .generator-header p {
+            color: var(--secondary-text);
+            font-size: 1.1rem;
+            line-height: 1.5;
         }
 
-        .game-button:hover {
-            transform: scale(1.05);
-        }
-
-        .input-section {
+        .category-selection {
             display: flex;
             gap: 1rem;
             margin-bottom: 2rem;
         }
 
-        .brand-input {
+        .category-dropdown {
             flex: 1;
-            padding: 1rem;
+            padding: 1rem 1.5rem;
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid var(--border-color);
             border-radius: 10px;
             color: var(--main-text);
             font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
         }
 
-        .brand-input:focus {
+        .category-dropdown:focus {
             outline: none;
             border-color: var(--accent-color);
             box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
         }
 
-        .analyze-button {
+        .category-dropdown option {
+            background: var(--main-bg);
+            color: var(--main-text);
+            padding: 0.5rem;
+        }
+
+        .generate-button {
             background: var(--gradient-accent);
             color: var(--main-bg);
             border: none;
@@ -715,11 +702,19 @@
             align-items: center;
             gap: 0.5rem;
             transition: all 0.3s ease;
+            min-width: 200px;
+            justify-content: center;
         }
 
-        .analyze-button:disabled {
+        .generate-button:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 255, 136, 0.3);
+        }
+
+        .generate-button:disabled {
             opacity: 0.5;
             cursor: not-allowed;
+            transform: none;
         }
 
         .processing-visual {
@@ -1378,8 +1373,8 @@
         // Инициализация при загрузке страницы
         document.addEventListener('DOMContentLoaded', function() {
             initializeAnimations();
-            initializeAICharacter();
-            initializeSimulationGame();
+            initializeFounder();
+            initializeFamLabGenerator();
             initializeCountdown();
             initializeTestimonials();
             initializeStatsCounter();
@@ -1464,56 +1459,67 @@
             });
         }
 
-        // AI персонаж
-        function initializeAICharacter() {
-            const aiTexts = [
-                "Привет! Я твой AI-помощник",
-                "Готов создать стратегию?",
-                "Анализирую бренды за секунды!",
-                "Давай сделаем магию вместе!",
-                "12 минут = готовая стратегия"
+        // Основатель
+        function initializeFounder() {
+            const founderTexts = [
+                "Привет! Я Алексей. Рад видеть тебя здесь.",
+                "Хватит собирать информацию - пора внедрять!",
+                "В FamLab мы учимся на практике, а не в теории",
+                "Присоединяйся к сообществу единомышленников",
+                "Вместе мы превратим AI из хайпа в инструмент"
             ];
             
             let currentTextIndex = 0;
-            const aiTextElement = document.getElementById('ai-text');
+            const founderTextElement = document.getElementById('founder-text');
+            const founderImage = document.querySelector('.founder-image');
             
+            // Анимация загрузки фото
+            founderImage.addEventListener('load', () => {
+                founderImage.classList.add('loaded');
+            });
+            
+            // Если изображение уже загружено
+            if (founderImage.complete) {
+                founderImage.classList.add('loaded');
+            }
+            
+            // Ротация текста
             setInterval(() => {
-                aiTextElement.style.opacity = '0';
+                founderTextElement.style.opacity = '0';
                 setTimeout(() => {
-                    currentTextIndex = (currentTextIndex + 1) % aiTexts.length;
-                    aiTextElement.textContent = aiTexts[currentTextIndex];
-                    aiTextElement.style.opacity = '1';
+                    currentTextIndex = (currentTextIndex + 1) % founderTexts.length;
+                    founderTextElement.textContent = founderTexts[currentTextIndex];
+                    founderTextElement.style.opacity = '1';
                 }, 300);
-            }, 4000);
+            }, 5000);
         }
 
-        // Симуляция игры
-        function initializeSimulationGame() {
-            const startBtn = document.getElementById('start-simulation');
-            const brandInput = document.getElementById('brand-url');
-            const analyzeBtn = document.getElementById('analyze-btn');
+        // Генератор идей FamLab
+        function initializeFamLabGenerator() {
+            const categorySelect = document.getElementById('category-select');
+            const generateBtn = document.getElementById('generate-btn');
             const processing = document.getElementById('processing');
             const results = document.getElementById('results');
 
-            // Активация кнопки анализа при вводе текста
-            brandInput.addEventListener('input', function() {
-                analyzeBtn.disabled = this.value.length < 3;
+            // Активация кнопки при выборе категории
+            categorySelect.addEventListener('change', function() {
+                generateBtn.disabled = this.value === '';
             });
 
-            // Старт симуляции
-            analyzeBtn.addEventListener('click', function() {
-                if (brandInput.value.length < 3) return;
+            // Генерация идей
+            generateBtn.addEventListener('click', function() {
+                if (categorySelect.value === '') return;
                 
                 // Скрываем результаты и показываем процесс
                 results.style.display = 'none';
                 processing.style.display = 'block';
                 
-                // Имитация анализа
+                // Генерация идей
                 setTimeout(() => {
                     processing.style.display = 'none';
                     
-                    // Генерируем случайные результаты
-                    generateSimulationResults(brandInput.value);
+                    // Генерируем идеи для выбранной категории
+                    generateFamLabIdeas(categorySelect.value);
                     
                     results.style.display = 'grid';
                     
@@ -1523,46 +1529,144 @@
                         card.style.animationDelay = `${index * 0.2}s`;
                     });
                     
-                }, 3000);
-            });
-
-            // Быстрый старт
-            startBtn.addEventListener('click', function() {
-                brandInput.value = 'apple.com';
-                brandInput.dispatchEvent(new Event('input'));
-                analyzeBtn.click();
+                }, 2500);
             });
         }
 
-        // Генерация результатов симуляции
-        function generateSimulationResults(url) {
-            const audiences = [
-                "Молодые профессионалы 25-35 лет",
-                "Креативные предприниматели 30-45 лет", 
-                "Tech-энтузиасты 20-40 лет",
-                "Бизнес-лидеры 35-50 лет"
-            ];
+        // Генерация идей FamLab
+        function generateFamLabIdeas(category) {
+            const ideas = {
+                'automation': {
+                    start: [
+                        "Создай AI-ассистента для email-ответов",
+                        "Автоматизируй заполнение отчетов с GPT",
+                        "Настрой AI для сортировки входящих задач",
+                        "Создай бота для планирования встреч"
+                    ],
+                    tools: [
+                        "Make.com + OpenAI API",
+                        "Zapier + ChatGPT плагины",
+                        "Microsoft Power Automate + AI Builder",
+                        "n8n + локальные AI модели"
+                    ],
+                    next: [
+                        "Изучи продвинутую автоматизацию в FamLab",
+                        "Пройди курс по интеграции AI-инструментов",
+                        "Научись создавать многоэтапные воркфлоу",
+                        "Освой настройку триггеров и условий"
+                    ]
+                },
+                'content': {
+                    start: [
+                        "Создай AI-копирайтера под свой стиль",
+                        "Настрой генерацию постов для соцсетей",
+                        "Автоматизируй создание описаний товаров",
+                        "Создай систему для генерации заголовков"
+                    ],
+                    tools: [
+                        "Claude + кастомные промпты",
+                        "ChatGPT + Brand Guidelines",
+                        "Writesonic + контент-планы",
+                        "Copy.ai + SEO-оптимизация"
+                    ],
+                    next: [
+                        "Изучи промпт-инжиниринг в FamLab",
+                        "Научись тренировать AI на своих данных",
+                        "Освой создание контент-стратегий с AI",
+                        "Пройди мастер-класс по AI-копирайтингу"
+                    ]
+                },
+                'analysis': {
+                    start: [
+                        "Анализируй тренды с помощью AI",
+                        "Создай систему мониторинга конкурентов",
+                        "Автоматизируй отчеты по продажам",
+                        "Настрой AI для анализа обратной связи"
+                    ],
+                    tools: [
+                        "Python + OpenAI для анализа данных",
+                        "Google Sheets + GPT функции",
+                        "Tableau + AI-инсайты",
+                        "R + машинное обучение"
+                    ],
+                    next: [
+                        "Изучи Data Science с AI в FamLab",
+                        "Освой создание дашбордов с AI-выводами",
+                        "Научись предсказательной аналитике",
+                        "Пройди курс по машинному обучению"
+                    ]
+                },
+                'coding': {
+                    start: [
+                        "Используй GitHub Copilot для ускорения кода",
+                        "Создай AI-помощника для дебаггинга",
+                        "Автоматизируй написание тестов",
+                        "Генерируй документацию кода с AI"
+                    ],
+                    tools: [
+                        "GitHub Copilot + VS Code",
+                        "ChatGPT + Code Interpreter",
+                        "Tabnine + твоя IDE",
+                        "Claude + рефакторинг кода"
+                    ],
+                    next: [
+                        "Изучи AI-driven разработку в FamLab",
+                        "Освой создание AI-приложений",
+                        "Научись интегрировать LLM в проекты",
+                        "Пройди курс по AI для программистов"
+                    ]
+                },
+                'business': {
+                    start: [
+                        "Создай AI-чатбота для клиентского сервиса",
+                        "Автоматизируй процесс онбординга",
+                        "Настрой AI для анализа KPI",
+                        "Создай систему предсказания продаж"
+                    ],
+                    tools: [
+                        "Chatbase + корпоративные данные",
+                        "HubSpot + AI автоматизация",
+                        "Notion AI + управление проектами",
+                        "Salesforce Einstein + CRM"
+                    ],
+                    next: [
+                        "Изучи AI в бизнес-процессах в FamLab",
+                        "Освой создание AI-стратегий",
+                        "Научись ROI-анализу AI-решений",
+                        "Пройди курс по цифровой трансформации"
+                    ]
+                },
+                'learning': {
+                    start: [
+                        "Создай персонального AI-тьютора",
+                        "Настрой систему микрообучения",
+                        "Автоматизируй создание тестов",
+                        "Создай AI-ментора для навыков"
+                    ],
+                    tools: [
+                        "ChatGPT + персонализированные промпты",
+                        "Claude + обучающие материалы",
+                        "Khan Academy + AI адаптация",
+                        "Anki + AI для карточек"
+                    ],
+                    next: [
+                        "Изучи персонализированное обучение в FamLab",
+                        "Освой создание адаптивных курсов",
+                        "Научись геймификации с AI",
+                        "Пройди программу по EdTech и AI"
+                    ]
+                }
+            };
             
-            const tones = [
-                "Дружелюбный, профессиональный, инновационный",
-                "Вдохновляющий, экспертный, доверительный",
-                "Современный, динамичный, мотивирующий",
-                "Премиальный, элегантный, надежный"
-            ];
-            
-            const contents = [
-                "15 готовых идей для постов",
-                "20 уникальных концепций контента",
-                "12 viral-идей для соцсетей",
-                "18 креативных форматов постов"
-            ];
-            
-            document.getElementById('audience-result').textContent = 
-                audiences[Math.floor(Math.random() * audiences.length)];
-            document.getElementById('tone-result').textContent = 
-                tones[Math.floor(Math.random() * tones.length)];
-            document.getElementById('content-result').textContent = 
-                contents[Math.floor(Math.random() * contents.length)];
+            const categoryIdeas = ideas[category];
+            if (categoryIdeas) {
+                document.getElementById('idea-start').textContent = 
+                    categoryIdeas.start[Math.floor(Math.random() * categoryIdeas.start.length)];
+                document.getElementById('idea-tools').textContent = 
+                    categoryIdeas.tools[Math.floor(Math.random() * categoryIdeas.tools.length)];
+                document.getElementById('idea-next').textContent = 
+                    categoryIdeas.next[Math.floor(Math.random() * categoryIdeas.next.length)];
+            }
         }
 
         // Обратный отсчет
