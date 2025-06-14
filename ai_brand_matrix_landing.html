@@ -1,0 +1,1683 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Brand Matrix - Твой SMM-Стратег</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Секция 1: Hero Screen с AI-персонажем -->
+    <section id="screen1" class="full-screen-section">
+        <div class="particles-bg"></div>
+        <div class="hero-content">
+            <div class="ai-character">
+                <div class="ai-avatar">
+                    <div class="ai-face">
+                        <div class="ai-eye left"></div>
+                        <div class="ai-eye right"></div>
+                        <div class="ai-mouth"></div>
+                    </div>
+                    <div class="ai-glow"></div>
+                </div>
+                <div class="speech-bubble">
+                    <span id="ai-text">Привет! Я твой AI-помощник</span>
+                </div>
+            </div>
+            
+            <h1 class="hero-title">
+                <span class="word">ТВОЙ</span>
+                <span class="word accent">SMM-СТРАТЕГ,</span>
+                <span class="word">КОТОРЫЙ</span>
+                <span class="word glow">НЕ СПИТ</span>
+            </h1>
+            
+            <p class="hero-subtitle">
+                Создай контент-матрицу для любого бренда за 
+                <span class="highlight">12 минут</span> 
+                с помощью AI Brand Matrix
+            </p>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="2847">0</div>
+                    <div class="stat-label">Довольных клиентов</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="156">0</div>
+                    <div class="stat-label">Брендов проанализировано</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="12">0</div>
+                    <div class="stat-label">Минут на анализ</div>
+                </div>
+            </div>
+            
+            <a href="#screen2" class="cta-button hero-cta">
+                <span>Увидеть магию</span>
+                <div class="button-particles"></div>
+                <i class="fas fa-rocket"></i>
+            </a>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-wheel"></div>
+            <span>Скролл</span>
+        </div>
+    </section>
+
+    <!-- Секция 2: Интерактивная демонстрация с мини-игрой -->
+    <section id="screen2" class="full-screen-section">
+        <div class="neural-bg"></div>
+        
+        <h2 class="section-title">
+            <span class="title-part">Всего</span>
+            <span class="title-part highlight">3 шага.</span>
+            <span class="title-part">Никакой магии,</span>
+            <span class="title-part accent">только технология.</span>
+        </h2>
+        
+        <!-- Мини-игра: симуляция работы AI -->
+        <div class="ai-simulation-game">
+            <div class="game-header">
+                <h3>🎮 Попробуй сам! Симуляция AI-анализа</h3>
+                <button id="start-simulation" class="game-button">Запустить анализ</button>
+            </div>
+            
+            <div class="simulation-container">
+                <div class="input-section">
+                    <input type="text" id="brand-url" placeholder="Введи URL бренда (например: apple.com)" class="brand-input">
+                    <button id="analyze-btn" class="analyze-button" disabled>
+                        <i class="fas fa-search"></i>
+                        Анализировать
+                    </button>
+                </div>
+                
+                <div class="processing-visual" id="processing">
+                    <div class="ai-brain">
+                        <div class="brain-node"></div>
+                        <div class="brain-node"></div>
+                        <div class="brain-node"></div>
+                        <div class="brain-node"></div>
+                        <div class="brain-connections"></div>
+                    </div>
+                    <div class="processing-text">Анализирую бренд...</div>
+                </div>
+                
+                <div class="results-section" id="results">
+                    <div class="result-card">
+                        <h4>🎯 Целевая аудитория</h4>
+                        <p id="audience-result">Молодые профессионалы 25-35 лет</p>
+                    </div>
+                    <div class="result-card">
+                        <h4>🗣️ Tone of Voice</h4>
+                        <p id="tone-result">Дружелюбный, профессиональный, инновационный</p>
+                    </div>
+                    <div class="result-card">
+                        <h4>📝 Контент-идеи</h4>
+                        <p id="content-result">15 готовых идей для постов</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Традиционные шаги процесса -->
+        <div class="demo-pipeline">
+            <div class="pipeline-step" data-step="1">
+                <div class="step-icon">
+                    <i class="fas fa-link"></i>
+                </div>
+                <h3>Вводные данные</h3>
+                <p>Вставляешь ссылку на сайт клиента</p>
+            </div>
+            
+            <div class="pipeline-arrow">
+                <div class="arrow-line"></div>
+                <div class="arrow-head"></div>
+            </div>
+            
+            <div class="pipeline-step" data-step="2">
+                <div class="step-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>AI-анализ</h3>
+                <p>Наша матрица анализирует бренд</p>
+            </div>
+            
+            <div class="pipeline-arrow">
+                <div class="arrow-line"></div>
+                <div class="arrow-head"></div>
+            </div>
+            
+            <div class="pipeline-step" data-step="3">
+                <div class="step-icon">
+                    <i class="fas fa-magic"></i>
+                </div>
+                <h3>Результат</h3>
+                <p>Получаешь готовую стратегию</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция 3: Pricing & CTA -->
+    <section id="screen3" class="full-screen-section">
+        <div class="offer-container">
+            <div class="features-showcase">
+                <h3 class="features-title">
+                    <i class="fas fa-gift"></i>
+                    Что ты получаешь:
+                </h3>
+                
+                <div class="features-grid">
+                    <div class="feature-item" data-delay="0">
+                        <div class="feature-icon">
+                            <i class="fas fa-microphone-alt"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Готовый Tone of Voice</h4>
+                            <p>Уникальный голос бренда для всех платформ</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item" data-delay="150">
+                        <div class="feature-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Контент-план на 30 дней</h4>
+                            <p>Готовые идеи для постов на месяц вперед</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item" data-delay="300">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Анализ целевой аудитории</h4>
+                            <p>Детальный портрет твоих клиентов</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item" data-delay="450">
+                        <div class="feature-icon">
+                            <i class="fas fa-infinity"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Пожизненный доступ</h4>
+                            <p>Используй AI-шаблон без ограничений</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pricing-section">
+                <div class="pricing-card">
+                    <div class="card-header">
+                        <h4>AI Brand Matrix</h4>
+                        <div class="premium-badge">Premium</div>
+                    </div>
+                    
+                    <div class="price-display">
+                        <div class="price-main">
+                            <span class="currency">₽</span>
+                            <span class="amount">990</span>
+                        </div>
+                        <div class="price-old">
+                            <span>Обычная цена: </span>
+                            <del>₽3,990</del>
+                        </div>
+                        <div class="discount-badge">
+                            -75% СКИДКА
+                        </div>
+                    </div>
+                    
+                    <div class="price-benefits">
+                        <div class="benefit">✨ Единоразовый платеж</div>
+                        <div class="benefit">🔒 Пожизненный доступ</div>
+                        <div class="benefit">⚡ Мгновенное получение</div>
+                    </div>
+                    
+                    <div class="urgency-timer">
+                        <div class="timer-label">Специальная цена истекает через:</div>
+                        <div class="countdown">
+                            <div class="time-unit">
+                                <span id="hours">23</span>
+                                <label>Часов</label>
+                            </div>
+                            <div class="time-unit">
+                                <span id="minutes">45</span>
+                                <label>Минут</label>
+                            </div>
+                            <div class="time-unit">
+                                <span id="seconds">30</span>
+                                <label>Секунд</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="cta-button final-cta" id="purchase-btn">
+                        <span class="btn-text">ПОЛУЧИТЬ ДОСТУП СЕЙЧАС</span>
+                        <div class="btn-glow"></div>
+                        <i class="fas fa-crown"></i>
+                    </a>
+                    
+                    <div class="guarantee">
+                        <i class="fas fa-shield-alt"></i>
+                        Гарантия возврата денег 30 дней
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="social-proof">
+            <div class="testimonials">
+                <div class="testimonial active">
+                    <div class="avatar">👨‍💼</div>
+                    <p>"За 12 минут получил стратегию, на которую обычно трачу целый день!"</p>
+                    <cite>— Алексей, SMM-менеджер</cite>
+                </div>
+                <div class="testimonial">
+                    <div class="avatar">👩‍💻</div>
+                    <p>"Клиенты в восторге от качества контента. Заказы выросли на 300%"</p>
+                    <cite>— Мария, маркетолог</cite>
+                </div>
+                <div class="testimonial">
+                    <div class="avatar">🧑‍🚀</div>
+                    <p>"Лучший инструмент для анализа брендов. Экономлю по 10 часов в неделю"</p>
+                    <cite>— Дмитрий, основатель агентства</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        :root {
+            --main-bg: #0B0B0F;
+            --card-bg: rgba(26, 26, 31, 0.8);
+            --accent-color: #00FF88;
+            --accent-hover: #00DD77;
+            --accent-secondary: #FF6B6B;
+            --main-text: #FFFFFF;
+            --secondary-text: #B0B0B0;
+            --border-color: rgba(255, 255, 255, 0.1);
+            --main-font: 'Inter', sans-serif;
+            --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-accent: linear-gradient(135deg, #00FF88 0%, #00DD77 100%);
+            --shadow-glow: 0 0 30px rgba(0, 255, 136, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--main-font);
+            background: var(--main-bg);
+            color: var(--main-text);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .full-screen-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 2rem;
+        }
+
+        /* ===== СЕКЦИЯ 1: HERO ===== */
+        #screen1 {
+            background: radial-gradient(ellipse at center, rgba(0, 255, 136, 0.1) 0%, transparent 70%),
+                        linear-gradient(135deg, #0B0B0F 0%, #1A1A1F 100%);
+        }
+
+        .particles-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(2px 2px at 20px 30px, rgba(0, 255, 136, 0.3), transparent),
+                radial-gradient(2px 2px at 40px 70px, rgba(102, 126, 234, 0.3), transparent),
+                radial-gradient(1px 1px at 90px 40px, rgba(255, 107, 107, 0.3), transparent),
+                radial-gradient(1px 1px at 130px 80px, rgba(0, 255, 136, 0.2), transparent);
+            background-repeat: repeat;
+            background-size: 150px 100px;
+            animation: particles-float 20s linear infinite;
+        }
+
+        @keyframes particles-float {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-150px, -100px); }
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 1200px;
+            z-index: 10;
+        }
+
+        .ai-character {
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .ai-avatar {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 1rem;
+            position: relative;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .ai-face {
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            position: relative;
+            border: 3px solid var(--accent-color);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .ai-eye {
+            width: 12px;
+            height: 12px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            position: absolute;
+            top: 35%;
+            animation: blink 4s infinite;
+        }
+
+        .ai-eye.left { left: 30%; }
+        .ai-eye.right { right: 30%; }
+
+        .ai-mouth {
+            width: 30px;
+            height: 15px;
+            border: 2px solid var(--accent-color);
+            border-top: none;
+            border-radius: 0 0 30px 30px;
+            position: absolute;
+            bottom: 30%;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: talk 2s ease-in-out infinite;
+        }
+
+        .ai-glow {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            opacity: 0.3;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .speech-bubble {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 1rem 1.5rem;
+            position: relative;
+            backdrop-filter: blur(10px);
+            margin-top: 1rem;
+        }
+
+        .speech-bubble::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid var(--border-color);
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 8vw, 6rem);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+
+        .hero-title .word {
+            display: inline-block;
+            margin-right: 0.5rem;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: slideInUp 0.8s ease-out forwards;
+        }
+
+        .hero-title .word.accent {
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation-delay: 0.2s;
+        }
+
+        .hero-title .word.glow {
+            color: var(--accent-color);
+            text-shadow: 0 0 20px var(--accent-color);
+            animation-delay: 0.6s;
+        }
+
+        .hero-title .word:nth-child(1) { animation-delay: 0.1s; }
+        .hero-title .word:nth-child(2) { animation-delay: 0.3s; }
+        .hero-title .word:nth-child(3) { animation-delay: 0.5s; }
+        .hero-title .word:nth-child(4) { animation-delay: 0.7s; }
+
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            color: var(--secondary-text);
+            margin-bottom: 3rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.8s forwards;
+        }
+
+        .hero-subtitle .highlight {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 3rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 1s forwards;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--accent-color);
+            display: block;
+        }
+
+        .stat-label {
+            color: var(--secondary-text);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.2rem 2.5rem;
+            background: var(--gradient-accent);
+            color: var(--main-bg);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
+        }
+
+        .hero-cta {
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 1.2s forwards;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 255, 136, 0.4);
+        }
+
+        .button-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255,255,255,0.3) 1px, transparent 1px);
+            background-size: 10px 10px;
+            animation: particles-move 2s linear infinite;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .cta-button:hover .button-particles {
+            opacity: 1;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: var(--secondary-text);
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-wheel {
+            width: 24px;
+            height: 40px;
+            border: 2px solid var(--secondary-text);
+            border-radius: 12px;
+            margin: 0 auto 0.5rem;
+            position: relative;
+        }
+
+        .scroll-wheel::before {
+            content: '';
+            width: 4px;
+            height: 8px;
+            background: var(--secondary-text);
+            border-radius: 2px;
+            position: absolute;
+            top: 6px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: scroll-dot 2s infinite;
+        }
+
+        /* ===== СЕКЦИЯ 2: ДЕМО ===== */
+        #screen2 {
+            background: linear-gradient(135deg, #1A1A1F 0%, #0B0B0F 100%);
+            flex-direction: column;
+            gap: 4rem;
+        }
+
+        .neural-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(0, 255, 136, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+            animation: neural-pulse 10s ease-in-out infinite;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 6vw, 4rem);
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 3rem;
+            z-index: 10;
+        }
+
+        .title-part {
+            display: inline-block;
+            margin-right: 0.5rem;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .title-part.highlight {
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .title-part.accent {
+            color: var(--accent-secondary);
+        }
+
+        .ai-simulation-game {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 4rem;
+            backdrop-filter: blur(10px);
+            max-width: 800px;
+            width: 100%;
+            z-index: 10;
+        }
+
+        .game-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .game-header h3 {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+        }
+
+        .game-button {
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+
+        .game-button:hover {
+            transform: scale(1.05);
+        }
+
+        .input-section {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .brand-input {
+            flex: 1;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            color: var(--main-text);
+            font-size: 1rem;
+        }
+
+        .brand-input:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+        }
+
+        .analyze-button {
+            background: var(--gradient-accent);
+            color: var(--main-bg);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .analyze-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .processing-visual {
+            text-align: center;
+            padding: 3rem;
+            display: none;
+        }
+
+        .ai-brain {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 2rem;
+            position: relative;
+            border: 2px solid var(--accent-color);
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(0, 255, 136, 0.1) 0%, transparent 70%);
+        }
+
+        .brain-node {
+            width: 20px;
+            height: 20px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            position: absolute;
+            animation: brain-pulse 2s ease-in-out infinite;
+        }
+
+        .brain-node:nth-child(1) { top: 20%; left: 30%; animation-delay: 0s; }
+        .brain-node:nth-child(2) { top: 20%; right: 30%; animation-delay: 0.5s; }
+        .brain-node:nth-child(3) { bottom: 20%; left: 30%; animation-delay: 1s; }
+        .brain-node:nth-child(4) { bottom: 20%; right: 30%; animation-delay: 1.5s; }
+
+        .processing-text {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            animation: typing 2s infinite;
+        }
+
+        .results-section {
+            display: none;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .result-card {
+            background: rgba(0, 255, 136, 0.1);
+            border: 1px solid var(--accent-color);
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            transform: scale(0);
+            animation: popup 0.5s ease-out forwards;
+        }
+
+        .result-card h4 {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .demo-pipeline {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr auto 1fr;
+            align-items: center;
+            gap: 2rem;
+            max-width: 1000px;
+            width: 100%;
+            z-index: 10;
+        }
+
+        .pipeline-step {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        .pipeline-step.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .pipeline-step:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 255, 136, 0.2);
+            border-color: var(--accent-color);
+        }
+
+        .step-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .step-icon::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+            transform: rotate(45deg);
+            animation: shimmer 3s linear infinite;
+        }
+
+        .pipeline-step h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        .pipeline-step p {
+            color: var(--secondary-text);
+            line-height: 1.6;
+        }
+
+        .pipeline-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            animation: slideInRight 0.8s ease-out forwards;
+        }
+
+        .arrow-line {
+            width: 40px;
+            height: 2px;
+            background: var(--accent-color);
+            position: relative;
+        }
+
+        .arrow-head {
+            width: 0;
+            height: 0;
+            border-left: 10px solid var(--accent-color);
+            border-top: 6px solid transparent;
+            border-bottom: 6px solid transparent;
+            margin-left: -2px;
+        }
+
+        /* ===== СЕКЦИЯ 3: PRICING ===== */
+        #screen3 {
+            background: radial-gradient(ellipse at center, rgba(102, 126, 234, 0.1) 0%, transparent 70%),
+                        linear-gradient(135deg, #0B0B0F 0%, #1A1A1F 100%);
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        .offer-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            max-width: 1400px;
+            width: 100%;
+            z-index: 10;
+        }
+
+        .features-showcase {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 25px;
+            padding: 3rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .features-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--accent-color);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .features-title i {
+            font-size: 1.5rem;
+        }
+
+        .features-grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+
+        .feature-item.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .feature-item:hover {
+            border-color: var(--accent-color);
+            background: rgba(0, 255, 136, 0.1);
+            transform: translateX(10px);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-accent);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--main-bg);
+            flex-shrink: 0;
+        }
+
+        .feature-content h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--main-text);
+        }
+
+        .feature-content p {
+            color: var(--secondary-text);
+            line-height: 1.6;
+        }
+
+        .pricing-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pricing-card {
+            background: var(--card-bg);
+            border: 2px solid var(--accent-color);
+            border-radius: 30px;
+            padding: 3rem;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(0, 255, 136, 0.2);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .pricing-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(0, 255, 136, 0.1), transparent);
+            animation: card-shimmer 4s linear infinite;
+            z-index: -1;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .card-header h4 {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .premium-badge {
+            background: var(--gradient-accent);
+            color: var(--main-bg);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .price-display {
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .price-main {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .currency {
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--accent-color);
+            margin-right: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .amount {
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--accent-color);
+            line-height: 1;
+        }
+
+        .price-old {
+            color: var(--secondary-text);
+            margin-bottom: 1rem;
+        }
+
+        .price-old del {
+            color: #ff6b6b;
+        }
+
+        .discount-badge {
+            background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            display: inline-block;
+            animation: pulse-badge 2s infinite;
+        }
+
+        .price-benefits {
+            margin-bottom: 2rem;
+        }
+
+        .benefit {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 0.8rem;
+            color: var(--secondary-text);
+        }
+
+        .urgency-timer {
+            background: rgba(255, 107, 107, 0.1);
+            border: 1px solid #ff6b6b;
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .timer-label {
+            color: #ff6b6b;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .countdown {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .time-unit {
+            text-align: center;
+        }
+
+        .time-unit span {
+            display: block;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #ff6b6b;
+            margin-bottom: 0.5rem;
+        }
+
+        .time-unit label {
+            font-size: 0.8rem;
+            color: var(--secondary-text);
+            text-transform: uppercase;
+        }
+
+        .final-cta {
+            width: 100%;
+            margin-bottom: 2rem;
+            font-size: 1.2rem;
+            padding: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-glow {
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            animation: btn-shine 3s infinite;
+        }
+
+        .guarantee {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            color: var(--secondary-text);
+            font-size: 0.9rem;
+        }
+
+        .guarantee i {
+            color: var(--accent-color);
+        }
+
+        .social-proof {
+            max-width: 1000px;
+            width: 100%;
+            z-index: 10;
+        }
+
+        .testimonials {
+            position: relative;
+            height: 120px;
+            overflow: hidden;
+        }
+
+        .testimonial {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .testimonial.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .testimonial .avatar {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial p {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: var(--main-text);
+        }
+
+        .testimonial cite {
+            color: var(--secondary-text);
+            font-size: 0.9rem;
+        }
+
+        /* ===== АНИМАЦИИ ===== */
+        @keyframes slideInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes blink {
+            0%, 90%, 100% { transform: scaleY(1); }
+            95% { transform: scaleY(0.1); }
+        }
+
+        @keyframes talk {
+            0%, 100% { transform: translateX(-50%) scaleY(1); }
+            50% { transform: translateX(-50%) scaleY(1.2); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(1.1); opacity: 0.5; }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+
+        @keyframes scroll-dot {
+            0% { transform: translateX(-50%) translateY(0); opacity: 1; }
+            100% { transform: translateX(-50%) translateY(20px); opacity: 0; }
+        }
+
+        @keyframes particles-move {
+            0% { transform: translateX(-100px); }
+            100% { transform: translateX(100px); }
+        }
+
+        @keyframes neural-pulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+
+        @keyframes brain-pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.2); opacity: 0.7; }
+        }
+
+        @keyframes typing {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        @keyframes popup {
+            0% { transform: scale(0) rotate(180deg); opacity: 0; }
+            100% { transform: scale(1) rotate(0deg); opacity: 1; }
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes card-shimmer {
+            0% { transform: translateX(-200%) translateY(-200%) rotate(45deg); }
+            100% { transform: translateX(200%) translateY(200%) rotate(45deg); }
+        }
+
+        @keyframes pulse-badge {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        @keyframes btn-shine {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        /* ===== АДАПТИВНОСТЬ ===== */
+        @media (max-width: 1024px) {
+            .offer-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .demo-pipeline {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .pipeline-arrow {
+                transform: rotate(90deg);
+                margin: 1rem 0;
+            }
+
+            .hero-stats {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .full-screen-section {
+                padding: 1rem;
+            }
+
+            .ai-simulation-game {
+                padding: 1.5rem;
+            }
+
+            .input-section {
+                flex-direction: column;
+            }
+
+            .game-header {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .pricing-card {
+                padding: 2rem;
+            }
+
+            .countdown {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .time-unit span {
+                font-size: 1.4rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+
+    <script>
+        // Инициализация при загрузке страницы
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeAnimations();
+            initializeAICharacter();
+            initializeSimulationGame();
+            initializeCountdown();
+            initializeTestimonials();
+            initializeStatsCounter();
+        });
+
+        // Анимации при скролле
+        function initializeAnimations() {
+            const observerOptions = {
+                threshold: 0.2,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = entry.target;
+                        
+                        // Анимация заголовков секций
+                        if (target.classList.contains('section-title')) {
+                            animateTitleParts(target);
+                        }
+                        
+                        // Анимация шагов процесса
+                        if (target.classList.contains('demo-pipeline')) {
+                            animatePipelineSteps(target);
+                        }
+                        
+                        // Анимация фич
+                        if (target.classList.contains('features-showcase')) {
+                            animateFeatures(target);
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            // Наблюдение за элементами
+            document.querySelectorAll('.section-title, .demo-pipeline, .features-showcase').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        // Анимация заголовков по частям
+        function animateTitleParts(titleElement) {
+            const parts = titleElement.querySelectorAll('.title-part');
+            parts.forEach((part, index) => {
+                setTimeout(() => {
+                    part.style.opacity = '1';
+                    part.style.transform = 'translateY(0)';
+                    part.style.transition = 'all 0.6s ease-out';
+                }, index * 200);
+            });
+        }
+
+        // Анимация шагов процесса
+        function animatePipelineSteps(pipelineElement) {
+            const steps = pipelineElement.querySelectorAll('.pipeline-step');
+            const arrows = pipelineElement.querySelectorAll('.pipeline-arrow');
+            
+            steps.forEach((step, index) => {
+                setTimeout(() => {
+                    step.classList.add('visible');
+                    
+                    // Анимация стрелки после шага
+                    if (arrows[index]) {
+                        setTimeout(() => {
+                            arrows[index].style.animationDelay = '0s';
+                            arrows[index].style.opacity = '1';
+                        }, 300);
+                    }
+                }, index * 500);
+            });
+        }
+
+        // Анимация фич
+        function animateFeatures(featuresElement) {
+            const features = featuresElement.querySelectorAll('.feature-item');
+            features.forEach((feature, index) => {
+                const delay = parseInt(feature.dataset.delay) || index * 150;
+                setTimeout(() => {
+                    feature.classList.add('visible');
+                }, delay);
+            });
+        }
+
+        // AI персонаж
+        function initializeAICharacter() {
+            const aiTexts = [
+                "Привет! Я твой AI-помощник",
+                "Готов создать стратегию?",
+                "Анализирую бренды за секунды!",
+                "Давай сделаем магию вместе!",
+                "12 минут = готовая стратегия"
+            ];
+            
+            let currentTextIndex = 0;
+            const aiTextElement = document.getElementById('ai-text');
+            
+            setInterval(() => {
+                aiTextElement.style.opacity = '0';
+                setTimeout(() => {
+                    currentTextIndex = (currentTextIndex + 1) % aiTexts.length;
+                    aiTextElement.textContent = aiTexts[currentTextIndex];
+                    aiTextElement.style.opacity = '1';
+                }, 300);
+            }, 4000);
+        }
+
+        // Симуляция игры
+        function initializeSimulationGame() {
+            const startBtn = document.getElementById('start-simulation');
+            const brandInput = document.getElementById('brand-url');
+            const analyzeBtn = document.getElementById('analyze-btn');
+            const processing = document.getElementById('processing');
+            const results = document.getElementById('results');
+
+            // Активация кнопки анализа при вводе текста
+            brandInput.addEventListener('input', function() {
+                analyzeBtn.disabled = this.value.length < 3;
+            });
+
+            // Старт симуляции
+            analyzeBtn.addEventListener('click', function() {
+                if (brandInput.value.length < 3) return;
+                
+                // Скрываем результаты и показываем процесс
+                results.style.display = 'none';
+                processing.style.display = 'block';
+                
+                // Имитация анализа
+                setTimeout(() => {
+                    processing.style.display = 'none';
+                    
+                    // Генерируем случайные результаты
+                    generateSimulationResults(brandInput.value);
+                    
+                    results.style.display = 'grid';
+                    
+                    // Анимация появления карточек результатов
+                    const resultCards = results.querySelectorAll('.result-card');
+                    resultCards.forEach((card, index) => {
+                        card.style.animationDelay = `${index * 0.2}s`;
+                    });
+                    
+                }, 3000);
+            });
+
+            // Быстрый старт
+            startBtn.addEventListener('click', function() {
+                brandInput.value = 'apple.com';
+                brandInput.dispatchEvent(new Event('input'));
+                analyzeBtn.click();
+            });
+        }
+
+        // Генерация результатов симуляции
+        function generateSimulationResults(url) {
+            const audiences = [
+                "Молодые профессионалы 25-35 лет",
+                "Креативные предприниматели 30-45 лет", 
+                "Tech-энтузиасты 20-40 лет",
+                "Бизнес-лидеры 35-50 лет"
+            ];
+            
+            const tones = [
+                "Дружелюбный, профессиональный, инновационный",
+                "Вдохновляющий, экспертный, доверительный",
+                "Современный, динамичный, мотивирующий",
+                "Премиальный, элегантный, надежный"
+            ];
+            
+            const contents = [
+                "15 готовых идей для постов",
+                "20 уникальных концепций контента",
+                "12 viral-идей для соцсетей",
+                "18 креативных форматов постов"
+            ];
+            
+            document.getElementById('audience-result').textContent = 
+                audiences[Math.floor(Math.random() * audiences.length)];
+            document.getElementById('tone-result').textContent = 
+                tones[Math.floor(Math.random() * tones.length)];
+            document.getElementById('content-result').textContent = 
+                contents[Math.floor(Math.random() * contents.length)];
+        }
+
+        // Обратный отсчет
+        function initializeCountdown() {
+            let timeLeft = 23 * 3600 + 45 * 60 + 30; // 23:45:30
+            
+            function updateCountdown() {
+                const hours = Math.floor(timeLeft / 3600);
+                const minutes = Math.floor((timeLeft % 3600) / 60);
+                const seconds = timeLeft % 60;
+                
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+                
+                if (timeLeft > 0) {
+                    timeLeft--;
+                } else {
+                    timeLeft = 23 * 3600 + 45 * 60 + 30; // Сброс
+                }
+            }
+            
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+        }
+
+        // Ротация отзывов
+        function initializeTestimonials() {
+            const testimonials = document.querySelectorAll('.testimonial');
+            let currentIndex = 0;
+            
+            function showNextTestimonial() {
+                testimonials[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % testimonials.length;
+                testimonials[currentIndex].classList.add('active');
+            }
+            
+            setInterval(showNextTestimonial, 5000);
+        }
+
+        // Счетчик статистики
+        function initializeStatsCounter() {
+            const stats = document.querySelectorAll('.stat-number');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = entry.target;
+                        const finalValue = parseInt(target.dataset.target);
+                        animateCounter(target, finalValue);
+                        observer.unobserve(target);
+                    }
+                });
+            });
+            
+            stats.forEach(stat => observer.observe(stat));
+        }
+
+        // Анимация счетчика
+        function animateCounter(element, target) {
+            let current = 0;
+            const increment = target / 100;
+            const duration = 2000;
+            const stepTime = duration / 100;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.floor(current);
+            }, stepTime);
+        }
+
+        // Плавный скролл для CTA кнопок
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Эффект параллакса для фона
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.particles-bg, .neural-bg');
+            
+            parallaxElements.forEach(element => {
+                const speed = 0.5;
+                element.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        });
+
+        // Трекинг кликов по CTA (заглушка)
+        document.querySelectorAll('.cta-button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                // Здесь можно добавить аналитику
+                console.log('CTA clicked:', this.textContent.trim());
+                
+                // Для финальной кнопки покупки
+                if (this.id === 'purchase-btn') {
+                    // Здесь должен быть реальный URL платежной системы
+                    alert('Здесь будет переход к оплате!');
+                    e.preventDefault();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
