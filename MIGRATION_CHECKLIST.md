@@ -6,7 +6,7 @@
 - [x] Hero Section (секция 1) - `#screen1`
 - [x] Demo Generator (секция 2) - `#screen2`
 - [x] AI Evolution Concept - `#ai-evolution-concept`
-- [ ] Cloud Transition - `#cloudTransition`
+- [x] Cloud Transition - `#cloudTransition` - Облачный переход с GSAP + Three.js
 - [ ] Comparison Section - `#comparison-section`
 - [ ] Pricing Section (секция 3) - `#screen3`
 
@@ -16,7 +16,7 @@
 - [x] `hero.html` - Hero секция с основателем
 - [x] `demo-generator.html` - Демо-генератор идей FamLab
 - [x] `ai-evolution.html` - Концептуальный блок эволюции AI
-- [ ] `cloud-transition.html` - Облако-переход
+- [x] `cloud-transition.html` - Облако-переход
 - [ ] `comparison.html` - Сравнительная таблица
 - [ ] `pricing.html` - Секция с ценами и CTA
 
@@ -26,7 +26,7 @@
 - [x] `base.css` - Базовые стили
 - [x] `demo-generator.css` - Стили демо-генератора
 - [x] `ai-evolution.css` - Стили блока эволюции AI
-- [ ] `cloud-transition.css` - Стили облака-перехода
+- [x] `cloud-transition.css` - Стили облака-перехода
 - [ ] `comparison.css` - Стили сравнительной таблицы
 - [ ] `pricing.css` - Стили секции с ценами
 
@@ -34,7 +34,7 @@
 - [x] `hero.js` - Логика hero секции (основатель, статистика)
 - [x] `demo-generator.js` - Логика генератора идей
 - [x] `ai-evolution.js` - Логика блока эволюции (GSAP анимации)
-- [ ] `cloud-transition.js` - Логика облака-перехода
+- [x] `cloud-transition.js` - Логика облака-перехода (GSAP + Three.js)
 - [ ] `comparison.js` - Логика сравнительной таблицы
 - [ ] `pricing.js` - Логика секции с ценами (таймер, отзывы)
 - [ ] `thought-bubbles.js` - Плавающие мыслепузыри
