@@ -6,7 +6,7 @@
 - [x] Hero Section (секция 1) - `#screen1`
 - [x] Demo Generator (секция 2) - `#screen2`
 - [x] AI Evolution Concept - `#ai-evolution-concept`
-- [x] Cloud Transition - `#cloudTransition` - Облачный переход с GSAP + Three.js
+- [x] Cloud Transition - `#cloudTransition` - **ПЕРЕСОБРАН**: Элегантный единый переход вместо хаотичных облаков
 - [ ] Comparison Section - `#comparison-section`
 - [ ] Pricing Section (секция 3) - `#screen3`
 
