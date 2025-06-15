@@ -1,0 +1,862 @@
+/* ===== КОНЦЕПТУАЛЬНЫЙ БЛОК: ЭВОЛЮЦИЯ AI ===== */
+.ai-evolution-container {
+    min-height: 300vh;
+    position: relative;
+    background: linear-gradient(180deg, var(--main-bg) 0%, #0a0a0f 20%, #1a1a2e 50%, #16213e 80%, var(--main-bg) 100%);
+    overflow: hidden;
+    perspective: 1000px;
+}
+
+/* Фоновые эффекты */
+.evolution-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.neural-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, var(--accent-color), transparent),
+        radial-gradient(2px 2px at 40px 70px, rgba(0, 255, 136, 0.5), transparent),
+        radial-gradient(1px 1px at 90px 40px, rgba(0, 255, 136, 0.3), transparent),
+        radial-gradient(1px 1px at 130px 80px, var(--accent-color), transparent),
+        radial-gradient(2px 2px at 160px 30px, rgba(0, 255, 136, 0.4), transparent);
+    background-repeat: repeat;
+    background-size: 200px 100px;
+    animation: neural-drift 20s linear infinite;
+    opacity: 0.6;
+}
+
+@keyframes neural-drift {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-100px); }
+}
+
+.data-streams {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(90deg, transparent 0%, rgba(0, 255, 136, 0.1) 50%, transparent 100%),
+        linear-gradient(45deg, transparent 0%, rgba(0, 255, 136, 0.05) 50%, transparent 100%);
+    background-size: 300px 100%, 200px 200px;
+    animation: data-flow 15s linear infinite;
+}
+
+@keyframes data-flow {
+    0% { background-position: 0% 0%, 0% 0%; }
+    100% { background-position: 100% 0%, 100% 100%; }
+}
+
+.quantum-field {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, rgba(0, 255, 136, 0.03) 0%, transparent 70%);
+    animation: quantum-pulse 8s ease-in-out infinite;
+}
+
+@keyframes quantum-pulse {
+    0%, 100% { transform: scale(1); opacity: 0.3; }
+    50% { transform: scale(1.1); opacity: 0.6; }
+}
+
+/* Основной контент */
+.evolution-content {
+    position: relative;
+    z-index: 10;
+    padding: 4rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Заголовок с морфинг-эффектом */
+.concept-header {
+    text-align: center;
+    margin-bottom: 6rem;
+    position: relative;
+}
+
+.morphing-title {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+}
+
+.title-layer {
+    display: block;
+    position: relative;
+    animation: title-morph 4s ease-in-out infinite;
+}
+
+.title-layer.accent {
+    color: var(--accent-color);
+    text-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+}
+
+.title-layer.glow {
+    background: linear-gradient(45deg, var(--accent-color), #00ddff, var(--accent-color));
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-shift 3s ease-in-out infinite, title-morph 4s ease-in-out infinite;
+}
+
+@keyframes title-morph {
+    0%, 100% { transform: perspective(400px) rotateY(0deg); }
+    25% { transform: perspective(400px) rotateY(5deg); }
+    75% { transform: perspective(400px) rotateY(-5deg); }
+}
+
+@keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.title-particles {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.title-particles::before,
+.title-particles::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    animation: particle-orbit 6s linear infinite;
+}
+
+.title-particles::before {
+    top: 0;
+    left: 50%;
+    animation-delay: 0s;
+}
+
+.title-particles::after {
+    bottom: 0;
+    right: 50%;
+    animation-delay: 3s;
+}
+
+@keyframes particle-orbit {
+    0% { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+}
+
+/* 3D мемы-карточки */
+.memes-3d-space {
+    position: relative;
+    height: 120vh;
+    width: 100%;
+    margin: 4rem 0;
+    transform-style: preserve-3d;
+}
+
+.meme-card {
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    width: clamp(200px, 22vw, 320px);
+    height: clamp(200px, 22vw, 320px);
+    transform-style: preserve-3d;
+    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    cursor: pointer;
+    opacity: 0;
+    animation: card-appear 1s ease-out forwards;
+    animation-delay: calc(var(--x) * 0.01s);
+}
+
+.floating-3d {
+    animation: float-3d 8s ease-in-out infinite;
+}
+
+@keyframes float-3d {
+    0%, 100% { 
+        transform: rotate(var(--rotation)) translateY(0px) translateZ(0px);
+    }
+    33% { 
+        transform: rotate(var(--rotation)) translateY(-15px) translateZ(20px);
+    }
+    66% { 
+        transform: rotate(var(--rotation)) translateY(10px) translateZ(-10px);
+    }
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.meme-card:hover .card-inner {
+    transform: rotateY(180deg) scale(1.05);
+}
+
+.meme-card:hover,
+.meme-card.active {
+    box-shadow: 
+        0 0 20px rgba(0, 255, 136, 0.6),
+        0 0 40px rgba(0, 255, 136, 0.4),
+        0 0 60px rgba(0, 255, 136, 0.2),
+        0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.meme-card.flipped .card-inner {
+    transform: rotateY(180deg) scale(1.05);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.3),
+        0 0 0 1px rgba(0, 255, 136, 0.2);
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    background: linear-gradient(135deg, 
+        rgba(0, 255, 136, 0.25) 0%, 
+        rgba(0, 221, 119, 0.25) 50%,
+        rgba(0, 255, 136, 0.15) 100%);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    border: 1px solid rgba(0, 255, 136, 0.3);
+}
+
+.meme-img-3d {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.6s ease;
+}
+
+.hologram-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, 
+        transparent 20%, 
+        rgba(0, 255, 136, 0.3) 40%,
+        rgba(255, 255, 255, 0.2) 50%,
+        rgba(0, 255, 136, 0.3) 60%,
+        transparent 80%);
+    background-size: 200% 200%;
+    animation: hologram-scan 2s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes hologram-scan {
+    0% { background-position: -100% -100%; }
+    100% { background-position: 100% 100%; }
+}
+
+.insight-text {
+    text-align: center;
+    color: var(--main-text);
+}
+
+.insight-text h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.insight-text p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    opacity: 1;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-color), #00ddff);
+    border-radius: 3px;
+    transition: width 1s ease-out;
+    animation: progress-glow 2s ease-in-out infinite;
+}
+
+@keyframes progress-glow {
+    0%, 100% { box-shadow: 0 0 5px rgba(0, 255, 136, 0.5); }
+    50% { box-shadow: 0 0 15px rgba(0, 255, 136, 0.8); }
+}
+
+@keyframes card-appear {
+    0% {
+        opacity: 0;
+        transform: rotate(var(--rotation)) scale(0.5) translateY(100px) rotateX(90deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(var(--rotation)) scale(1) translateY(0) rotateX(0deg);
+    }
+}
+
+/* Стили для подсказки взаимодействия */
+.interaction-hint {
+    margin-top: 1.5rem;
+    text-align: center;
+    opacity: 0;
+    animation: hint-appear 1s ease-out 2s forwards;
+}
+
+.hint-text {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    background: rgba(0, 255, 136, 0.1);
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    border: 1px solid rgba(0, 255, 136, 0.3);
+    display: inline-block;
+    animation: hint-pulse 3s ease-in-out infinite;
+}
+
+@keyframes hint-appear {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes hint-pulse {
+    0%, 100% { 
+        box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+        transform: scale(1);
+    }
+    50% { 
+        box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+        transform: scale(1.05);
+    }
+}
+
+/* Стили для облака-перехода */
+.cloud-transition-wrapper {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 5;
+}
+
+.cloud-transition {
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    left: -10%;
+    top: 100%;
+    background: radial-gradient(ellipse at center, 
+        rgba(0, 255, 136, 0.9) 0%, 
+        rgba(0, 255, 136, 0.7) 20%,
+        rgba(0, 255, 136, 0.5) 40%,
+        rgba(0, 255, 136, 0.3) 60%, 
+        rgba(0, 255, 136, 0.1) 80%,
+        transparent 100%);
+    clip-path: polygon(
+        0% 40%, 15% 35%, 25% 45%, 35% 30%, 50% 40%, 
+        65% 25%, 75% 35%, 85% 30%, 100% 45%, 100% 100%, 0% 100%
+    );
+    filter: blur(2px);
+    opacity: 0;
+    transform: translateY(0);
+    transition: all 1s ease-out;
+}
+
+.cloud-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(2px 2px at 20% 30%, rgba(0, 255, 136, 0.8), transparent),
+        radial-gradient(2px 2px at 40% 70%, rgba(0, 255, 136, 0.6), transparent),
+        radial-gradient(1px 1px at 90% 40%, rgba(0, 255, 136, 0.4), transparent),
+        radial-gradient(1px 1px at 130% 80%, rgba(0, 255, 136, 0.3), transparent),
+        radial-gradient(2px 2px at 160% 30%, rgba(0, 255, 136, 0.5), transparent);
+    background-size: 200px 200px, 300px 300px, 150px 150px, 250px 250px, 180px 180px;
+    animation: cloud-particles-drift 20s linear infinite;
+    opacity: 0.7;
+}
+
+.cloud-morphing {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, 
+        transparent 0%, 
+        rgba(0, 255, 136, 0.2) 25%,
+        rgba(0, 255, 136, 0.4) 50%,
+        rgba(0, 255, 136, 0.2) 75%,
+        transparent 100%);
+    background-size: 400% 400%;
+    animation: cloud-morphing-wave 8s ease-in-out infinite;
+    mix-blend-mode: screen;
+}
+
+@keyframes cloud-particles-drift {
+    0% { 
+        background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+        transform: rotate(0deg);
+    }
+    100% { 
+        background-position: 100% 100%, -100% 100%, 100% -100%, -100% -100%, 100% 100%;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes cloud-morphing-wave {
+    0%, 100% { 
+        background-position: 0% 50%;
+        opacity: 0.3;
+    }
+    25% { 
+        background-position: 100% 50%;
+        opacity: 0.6;
+    }
+    50% { 
+        background-position: 100% 100%;
+        opacity: 0.4;
+    }
+    75% { 
+        background-position: 0% 100%;
+        opacity: 0.7;
+    }
+}
+
+/* Состояния облака */
+.cloud-transition.active {
+    opacity: 1;
+    transform: translateY(-50%);
+}
+
+.cloud-transition.revealed {
+    opacity: 0.3;
+    transform: translateY(-100%);
+    clip-path: polygon(
+        0% 0%, 100% 0%, 100% 20%, 85% 25%, 75% 15%, 
+        65% 30%, 50% 20%, 35% 35%, 25% 25%, 15% 30%, 0% 25%
+    );
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .memes-3d-space {
+        height: 150vh;
+        margin: 2rem 0;
+    }
+    
+    .meme-card {
+        width: clamp(150px, 35vw, 250px);
+        height: clamp(150px, 35vw, 250px);
+    }
+    
+    .card-back {
+        padding: 1rem;
+    }
+    
+    .insight-text h4 {
+        font-size: 1rem;
+    }
+    
+    .insight-text p {
+        font-size: 0.8rem;
+    }
+    
+    .hint-text {
+        font-size: 0.9rem;
+        padding: 0.4rem 1rem;
+    }
+    
+    .cloud-transition-wrapper {
+        height: 50vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .meme-card {
+        width: clamp(120px, 40vw, 200px);
+        height: clamp(120px, 40vw, 200px);
+    }
+    
+    .card-back {
+        padding: 0.8rem;
+    }
+    
+    .insight-text h4 {
+        font-size: 0.9rem;
+        margin-bottom: 0.3rem;
+    }
+    
+    .insight-text p {
+        font-size: 0.75rem;
+        margin-bottom: 0.8rem;
+    }
+}
+
+/* Интерактивная временная шкала */
+.evolution-timeline {
+    margin: 6rem 0;
+    position: relative;
+}
+
+.timeline-track {
+    width: 80%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 0 auto;
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+}
+
+.timeline-progress {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-color), #00ddff);
+    border-radius: 2px;
+    width: 0%;
+    transition: width 2s ease-out;
+    animation: timeline-pulse 3s ease-in-out infinite;
+}
+
+@keyframes timeline-pulse {
+    0%, 100% { box-shadow: 0 0 10px rgba(0, 255, 136, 0.5); }
+    50% { box-shadow: 0 0 20px rgba(0, 255, 136, 0.8), 0 0 30px rgba(0, 255, 136, 0.4); }
+}
+
+.timeline-points {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    top: -10px;
+}
+
+.timeline-point {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timeline-point.active {
+    background: var(--accent-color);
+    transform: scale(1.2);
+}
+
+.timeline-point:hover {
+    transform: scale(1.3);
+}
+
+.point-glow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: var(--accent-color);
+    opacity: 0;
+    animation: point-pulse 2s ease-in-out infinite;
+}
+
+.timeline-point.active .point-glow {
+    opacity: 1;
+}
+
+@keyframes point-pulse {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.5); opacity: 0; }
+}
+
+.point-label {
+    position: absolute;
+    top: 30px;
+    font-size: 0.8rem;
+    color: var(--main-text);
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+/* 3D статистика клуба */
+.club-stats-3d {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin: 6rem 0;
+    flex-wrap: wrap;
+}
+
+.stat-cube {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: cube-float 6s ease-in-out infinite;
+    cursor: pointer;
+    opacity: 0;
+    animation: cube-appear 1s ease-out forwards, cube-float 6s ease-in-out infinite;
+    animation-delay: calc(var(--delay, 0) * 1ms);
+}
+
+.stat-cube:hover {
+    animation-play-state: paused;
+    transform: rotateY(180deg) scale(1.1);
+}
+
+@keyframes cube-float {
+    0%, 100% { transform: rotateY(0deg) translateY(0px); }
+    33% { transform: rotateY(120deg) translateY(-10px); }
+    66% { transform: rotateY(240deg) translateY(5px); }
+}
+
+@keyframes cube-appear {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) rotateY(90deg);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotateY(0deg);
+    }
+}
+
+.cube-face {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(135deg, rgba(0, 255, 136, 0.1) 0%, rgba(0, 221, 119, 0.1) 100%);
+    border: 2px solid rgba(0, 255, 136, 0.3);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    backdrop-filter: blur(20px);
+}
+
+.cube-face.front {
+    transform: translateZ(75px);
+}
+
+.cube-face.back {
+    transform: rotateY(180deg) translateZ(75px);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--main-text);
+    text-align: center;
+    font-weight: 600;
+}
+
+.stat-icon {
+    font-size: 4rem;
+    opacity: 0.8;
+}
+
+/* Призыв к действию */
+.concept-cta {
+    text-align: center;
+    margin: 6rem 0;
+}
+
+.cta-text h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--main-text);
+    font-weight: 700;
+}
+
+.cta-text p {
+    font-size: 1.2rem;
+    color: var(--secondary-text);
+    margin-bottom: 3rem;
+}
+
+.evolution-button {
+    position: relative;
+    padding: 1.5rem 3rem;
+    background: linear-gradient(135deg, var(--accent-color) 0%, #00ddff 100%);
+    border: none;
+    border-radius: 50px;
+    color: var(--main-bg);
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    transform-style: preserve-3d;
+}
+
+.evolution-button:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 255, 136, 0.3);
+}
+
+.btn-text {
+    position: relative;
+    z-index: 10;
+}
+
+.btn-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 1px, transparent 1px);
+    background-size: 20px 20px;
+    animation: btn-particles-move 2s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.evolution-button:hover .btn-particles {
+    opacity: 1;
+}
+
+@keyframes btn-particles-move {
+    0% { background-position: 0 0; }
+    100% { background-position: 20px 20px; }
+}
+
+.btn-glow {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, var(--accent-color), #00ddff, var(--accent-color));
+    background-size: 200% 200%;
+    border-radius: 50px;
+    z-index: -1;
+    animation: btn-glow-rotate 3s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.evolution-button:hover .btn-glow {
+    opacity: 1;
+}
+
+@keyframes btn-glow-rotate {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+}
+
+/* Переход к следующему блоку */
+.concept-transition {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+}
+
+.transition-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200%;
+    height: 100px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(0, 255, 136, 0.1) 25%, 
+        rgba(0, 255, 136, 0.2) 50%, 
+        rgba(0, 255, 136, 0.1) 75%, 
+        transparent 100%);
+    animation: wave-flow 8s linear infinite;
+}
+
+@keyframes wave-flow {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0%); }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .evolution-content {
+        padding: 2rem 1rem;
+    }
+    
+    .club-stats-3d {
+        gap: 2rem;
+    }
+    
+    .stat-cube {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .cube-face {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .cube-face.front {
+        transform: translateZ(60px);
+    }
+    
+    .cube-face.back {
+        transform: rotateY(180deg) translateZ(60px);
+    }
+    
+    .meme-card {
+        width: clamp(150px, 35vw, 250px);
+        height: clamp(150px, 35vw, 250px);
+    }
+} 

@@ -26,6 +26,9 @@
     
     <!-- Demo Generator стили -->
     <link rel="stylesheet" href="src/css/demo-generator.css">
+    
+    <!-- AI Evolution стили -->
+    <link rel="stylesheet" href="src/css/ai-evolution.css">
 </head>
 <body>
     <!-- Контейнер для плавающих мыслепузырей -->
@@ -96,6 +99,8 @@
             <span>Скролл</span>
         </div>
     </section>
+    
+    <!-- include: ai-evolution.html -->
     
     <!-- Секция 2: Интерактивная демонстрация с мини-игрой -->
     <section id="screen2" class="full-screen-section">
@@ -204,6 +209,9 @@
     <!-- Demo Generator JavaScript -->
     <script src="src/js/demo-generator.js"></script>
     
+    <!-- AI Evolution JavaScript -->
+    <script src="src/js/ai-evolution.js"></script>
+    
     <!-- Инициализация Hero Section -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -219,6 +227,12 @@
             setTimeout(() => initializeFamLabGenerator(), 300);
             setTimeout(() => initializeDemoSectionTitle(), 800);
             setTimeout(() => initializePipelineAnimation(), 1000);
+            
+            // Инициализируем AI Evolution
+            setTimeout(() => initializeAIEvolutionSection(), 400);
+            setTimeout(() => initializeMemeInteractions(), 900);
+            setTimeout(() => enhanceEvolutionButton(), 1100);
+            setTimeout(() => initializeCloudTransition(), 1200);
             
             // Добавляем глобальные улучшения
             initializeGlobalEnhancements();
