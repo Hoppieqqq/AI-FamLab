@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--main-font);
+    background: var(--main-bg);
+    color: var(--main-text);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.full-screen-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: var(--spacing-xl) var(--spacing-lg);
+    scroll-snap-align: start;
+    transition: all 0.6s ease-in-out;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Убираем все отступы между секциями */
+.full-screen-section + .full-screen-section {
+    margin-top: 0;
+    border-top: none;
+}
+
+/* Единообразные контейнеры */
+.hero-content,
+.ai-simulation-game,
+.comparison-container,
+.pricing-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* ===== ГЛОБАЛЬНЫЕ УЛУЧШЕНИЯ ===== */
+body.enhanced {
+    transition: all 0.3s ease;
+}
+
+.full-screen-section.in-viewport {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.full-screen-section:not(.in-viewport) {
+    transform: translateY(20px);
+    opacity: 0.95;
+}
+
+/* Улучшенные переходы для элементов */
+.hero-content,
+.ai-simulation-game,
+.comparison-container,
+.pricing-card {
+    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Плавный скролл для всего документа */
+html {
+    scroll-behavior: smooth;
+} 

@@ -1,0 +1,32 @@
+:root {
+    --main-bg: #0D0D0F;
+    --card-bg: rgba(26, 26, 31, 0.8);
+    --accent-color: #00FF88;
+    --accent-hover: #00DD77;
+    --accent-secondary: #FF6B6B;
+    --main-text: #EAEAEA;
+    --secondary-text: #A0A0A0;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --main-font: 'Inter', sans-serif;
+    --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-accent: linear-gradient(135deg, #00FF88 0%, #00DD77 100%);
+    --shadow-glow: 0 0 30px rgba(0, 255, 136, 0.3);
+    
+    /* === СИСТЕМА ВИЗУАЛЬНЫХ ВЕСОВ === */
+    --spacing-xs: 0.5rem;    /* 8px */
+    --spacing-sm: 1rem;      /* 16px */
+    --spacing-md: 2rem;      /* 32px */
+    --spacing-lg: 4rem;      /* 64px */
+    --spacing-xl: 8rem;      /* 128px */
+    --spacing-xxl: 12rem;    /* 192px */
+    
+    /* === ВИЗУАЛЬНАЯ ИЕРАРХИЯ === */
+    --hierarchy-primary: 3rem;
+    --hierarchy-secondary: 2rem;
+    --hierarchy-tertiary: 1.5rem;
+    --hierarchy-body: 1rem;
+    
+    /* === ПУЗЫРИ АНИМАЦИЯ === */
+    --bubble-speed: 12s;
+    --bubble-delay: 0.5s;
+} 

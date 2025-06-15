@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI FamLab - Закрытый клуб для изучения AI</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <!-- GSAP для мощных анимаций -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13/dist/MotionPathPlugin.min.js"></script>
+    
+    <!-- Three.js для 3D эффектов -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
+    
+    <!-- Canvas Confetti для эффектов -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    
+    <!-- CSS переменные и базовые стили -->
+    <link rel="stylesheet" href="src/css/variables.css">
+    <link rel="stylesheet" href="src/css/base.css">
+    
+    <!-- Hero Section стили -->
+    <link rel="stylesheet" href="src/css/hero.css">
+</head>
+<body>
+    <!-- include: hero.html -->
+    
+    <!-- Hero Section JavaScript -->
+    <script src="src/js/hero.js"></script>
+    
+    <!-- Инициализация Hero Section -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Добавляем плавный скролл
+            document.documentElement.style.scrollBehavior = 'smooth';
+            
+            // Инициализируем Hero Section компоненты с задержками для плавности
+            setTimeout(() => initializeFounder(), 200);
+            setTimeout(() => initializeStatsCounter(), 600);
+            setTimeout(() => initializeThoughtBubbles(), 700);
+            
+            // Добавляем глобальные улучшения
+            initializeGlobalEnhancements();
+        });
+    </script>
+</body>
+</html> 

@@ -15,52 +15,60 @@
     <section id="screen1" class="full-screen-section">
         <div class="particles-bg"></div>
         <div class="hero-content">
-            <div class="founder-character">
+            <!-- Основатель сбоку -->
+            <div class="founder-sidebar">
                 <div class="founder-photo">
-                    <img src="assets/images/alexey-founder.svg" alt="Алексей - основатель AI FamLab" class="founder-image">
+                    <img src="assets/images/alexey-founder.png" alt="Алексей - основатель AI FamLab" class="founder-image">
                     <div class="founder-glow"></div>
                 </div>
                 <div class="speech-bubble">
-                    <span id="founder-text">Привет! Я Алексей. Рад видеть тебя здесь.</span>
+                    <span id="founder-text">Привет! Рады видеть тебя в AI FamLab!</span>
+                </div>
+                <div class="founder-info">
+                    <h3>Алексей</h3>
+                    <p>Основатель AI FamLab</p>
                 </div>
             </div>
             
-            <h1 class="hero-title">
-                <span class="word">ХВАТИТ</span>
-                <span class="word">СОХРАНЯТЬ,</span>
-                <span class="word accent">ПОРА</span>
-                <span class="word accent">ВНЕДРЯТЬ.</span>
-                <span class="word">ПЕРЕСТАНЬ</span>
-                <span class="word">БЫТЬ</span>
-                <span class="word glow">ЗРИТЕЛЕМ.</span>
-            </h1>
-            
-            <p class="hero-subtitle">
-                AI FamLab — это закрытый клуб для тех, кто устал от инфошума. 
-                Здесь мы вместе проходим путь от "что это за нейронка?" до создания AI-помощников 
-                и автоматизации рутины. Без воды и снобизма.
-            </p>
-            
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <div class="stat-number" data-target="124">0</div>
-                    <div class="stat-label">Резидентов в FamLab</div>
+            <!-- Основной контент -->
+            <div class="hero-main">
+                <h1 class="hero-title">
+                    <span class="word">ХВАТИТ</span>
+                    <span class="word">СОХРАНЯТЬ,</span>
+                    <span class="word accent">ПОРА</span>
+                    <span class="word accent">ВНЕДРЯТЬ.</span>
+                    <span class="word">ПЕРЕСТАНЬ</span>
+                    <span class="word">БЫТЬ</span>
+                    <span class="word glow">ЗРИТЕЛЕМ.</span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    AI FamLab — это закрытый клуб для тех, кто устал от инфошума и ценит своё время. 
+                    Здесь мы вместе проходим путь от "что это за нейронка?" до создания AI-помощников 
+                    и автоматизации рутины. Без воды и снобизма.
+                </p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="124">0</div>
+                        <div class="stat-label">Резидентов в FamLab</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="289">0</div>
+                        <div class="stat-label">Полезных гайдов и фишек</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="17">0</div>
+                        <div class="stat-label">Совместных проектов</div>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-target="289">0</div>
-                    <div class="stat-label">Полезных гайдов и фишек</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-target="17">0</div>
-                    <div class="stat-label">Совместных проектов</div>
-                </div>
+                
+                <a href="#screen3" class="cta-button hero-cta">
+                    <span>СТАТЬ ЧАСТЬЮ КЛУБА</span>
+                    <div class="button-particles"></div>
+                    <i class="fas fa-users"></i>
+                </a>
             </div>
-            
-            <a href="#screen3" class="cta-button hero-cta">
-                <span>СТАТЬ ЧАСТЬЮ КЛУБА</span>
-                <div class="button-particles"></div>
-                <i class="fas fa-users"></i>
-            </a>
         </div>
         
         <div class="scroll-indicator">
@@ -620,39 +628,60 @@
         }
 
         .hero-content {
-            text-align: center;
-            max-width: 1200px;
+            display: grid;
+            grid-template-columns: 400px 1fr;
+            gap: 4rem;
+            max-width: 1400px;
             z-index: 10;
+            align-items: flex-start;
+            min-height: 80vh;
         }
 
-        .founder-character {
-            margin-bottom: 3rem;
-            position: relative;
+        .founder-sidebar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: sticky;
+            top: 2rem;
+            height: fit-content;
         }
 
         .founder-photo {
-            width: 160px;
-            height: 160px;
-            margin: 0 auto 1rem;
+            width: 350px;
+            height: 450px;
+            margin-bottom: 1.5rem;
             position: relative;
             animation: float 3s ease-in-out infinite;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 255, 136, 0.3);
+            border: 3px solid var(--accent-color);
+        }
+
+        .hero-main {
+            text-align: left;
+            padding-top: 2rem;
         }
 
         .founder-image {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
+            width: 120%;
+            height: 120%;
             object-fit: cover;
-            border: 3px solid var(--accent-color);
-            box-shadow: var(--shadow-glow);
+            object-position: center top;
             transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
             opacity: 0;
-            transform: translateY(50px);
+            transform: translateY(50px) translateX(-10%) scale(1.1);
+            filter: brightness(1.1) contrast(1.05);
         }
 
         .founder-image.loaded {
             opacity: 1;
-            transform: translateY(0);
+            transform: translateX(-10%) scale(1.1);
+        }
+
+        .founder-image:hover {
+            transform: translateX(-10%) scale(1.13);
+            filter: brightness(1.2) contrast(1.1);
         }
 
         .founder-glow {
@@ -672,10 +701,35 @@
             background: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 20px;
-            padding: 1rem 1.5rem;
+            padding: 1.2rem 1.8rem;
             position: relative;
             backdrop-filter: blur(10px);
             margin-top: 1rem;
+            max-width: 320px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            font-size: 1rem;
+            line-height: 1.4;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        #founder-text {
+            font-family: 'Courier New', monospace;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: all 0.1s ease;
+            display: block;
+            min-height: 1.4em;
+        }
+
+        .speech-bubble.scrambling {
+            border-color: var(--accent-color);
+            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.2);
+        }
+
+        .speech-bubble.scrambling #founder-text {
+            color: var(--accent-color);
+            text-shadow: 0 0 5px rgba(0, 255, 136, 0.3);
         }
 
         .speech-bubble::before {
@@ -687,6 +741,24 @@
             border-left: 10px solid transparent;
             border-right: 10px solid transparent;
             border-bottom: 10px solid var(--border-color);
+        }
+
+        .founder-info {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .founder-info h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .founder-info p {
+            color: var(--secondary-text);
+            font-size: 0.9rem;
+            font-weight: 500;
         }
 
         .hero-title {
@@ -1754,6 +1826,34 @@
 
         /* ===== АДАПТИВНОСТЬ ===== */
         @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                text-align: center;
+                max-width: 900px;
+            }
+
+            .hero-main {
+                text-align: center;
+                padding-top: 0;
+            }
+
+            .founder-sidebar {
+                position: static;
+                order: -1;
+            }
+
+            .founder-photo {
+                width: 280px;
+                height: 350px;
+                margin: 0 auto 1.5rem;
+            }
+
+            .speech-bubble {
+                max-width: 280px;
+                margin: 1rem auto;
+            }
+
             .offer-container {
                 grid-template-columns: 1fr;
                 gap: 3rem;
@@ -1778,6 +1878,26 @@
         @media (max-width: 768px) {
             .full-screen-section {
                 padding: 1rem;
+            }
+
+            .hero-content {
+                gap: 2rem;
+                max-width: 100%;
+            }
+
+            .founder-photo {
+                width: 220px;
+                height: 280px;
+            }
+
+            .speech-bubble {
+                max-width: 250px;
+                padding: 1rem 1.2rem;
+                font-size: 0.9rem;
+            }
+
+            .founder-info h3 {
+                font-size: 1.3rem;
             }
 
             .ai-simulation-game {
@@ -1978,11 +2098,9 @@
         // Основатель
         function initializeFounder() {
             const founderTexts = [
-                "Привет! Я Алексей. Рад видеть тебя здесь.",
-                "Хватит собирать информацию - пора внедрять!",
-                "В FamLab мы учимся на практике, а не в теории",
-                "Присоединяйся к сообществу единомышленников",
-                "Вместе мы превратим AI из хайпа в инструмент"
+                "Привет! Рады видеть тебя в AI FamLab!",
+                "Хватит собирать инфу, пора внедрять!",
+                "Будь на шаг впереди! Вступай в наш клуб!"
             ];
             
             let currentTextIndex = 0;
@@ -1999,15 +2117,92 @@
                 founderImage.classList.add('loaded');
             }
             
-            // Ротация текста
-            setInterval(() => {
-                founderTextElement.style.opacity = '0';
-                setTimeout(() => {
-                    currentTextIndex = (currentTextIndex + 1) % founderTexts.length;
-                    founderTextElement.textContent = founderTexts[currentTextIndex];
-                    founderTextElement.style.opacity = '1';
-                }, 300);
-            }, 5000);
+            // Креативная ротация текста с пересборкой
+            function animateTextTransition() {
+                const currentText = founderTexts[currentTextIndex];
+                const nextIndex = (currentTextIndex + 1) % founderTexts.length;
+                const nextText = founderTexts[nextIndex];
+                const speechBubble = founderTextElement.parentElement;
+                
+                // Добавляем класс для визуального эффекта
+                speechBubble.classList.add('scrambling');
+                
+                // Этап 1: Разборка текста
+                scrambleText(founderTextElement, currentText, () => {
+                    // Этап 2: Сборка нового текста
+                    currentTextIndex = nextIndex;
+                    assembleText(founderTextElement, nextText, () => {
+                        // Убираем класс после завершения анимации
+                        speechBubble.classList.remove('scrambling');
+                        // Запускаем следующую итерацию без задержки
+                        animateTextTransition();
+                    });
+                });
+            }
+            
+            // Функция разборки текста
+            function scrambleText(element, originalText, callback) {
+                const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()';
+                let iterations = 0;
+                const maxIterations = originalText.length;
+                
+                const scrambleInterval = setInterval(() => {
+                    element.textContent = originalText
+                        .split('')
+                        .map((char, index) => {
+                            if (char === ' ') return ' ';
+                            if (index < iterations) {
+                                return chars[Math.floor(Math.random() * chars.length)];
+                            }
+                            return originalText[index];
+                        })
+                        .join('');
+                    
+                    iterations++;
+                    
+                    if (iterations > maxIterations) {
+                        clearInterval(scrambleInterval);
+                        // Небольшая задержка перед переходом к сборке
+                        setTimeout(() => {
+                            callback();
+                        }, 50);
+                    }
+                }, 40);
+            }
+            
+            // Функция сборки нового текста
+            function assembleText(element, newText, callback) {
+                const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()';
+                let iterations = 0;
+                
+                const assembleInterval = setInterval(() => {
+                    element.textContent = newText
+                        .split('')
+                        .map((char, index) => {
+                            if (char === ' ') return ' ';
+                            if (index < iterations) {
+                                return newText[index];
+                            }
+                            return chars[Math.floor(Math.random() * chars.length)];
+                        })
+                        .join('');
+                    
+                    iterations++;
+                    
+                    if (iterations >= newText.length) {
+                        clearInterval(assembleInterval);
+                        // Финальная стабилизация текста
+                        element.textContent = newText;
+                        // Задержка 1.8 секунды перед вызовом callback
+                        setTimeout(() => {
+                            if (callback) callback();
+                        }, 1800);
+                    }
+                }, 35);
+            }
+            
+            // Первый запуск через 1.8 секунды, затем автоматически по завершении анимации
+            setTimeout(animateTextTransition, 1800);
         }
 
         // Генератор идей FamLab
