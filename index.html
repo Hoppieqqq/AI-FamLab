@@ -97,7 +97,106 @@
         </div>
     </section>
     
-    <!-- include: demo-generator.html -->
+    <!-- Секция 2: Интерактивная демонстрация с мини-игрой -->
+    <section id="screen2" class="full-screen-section">
+        <div class="neural-bg"></div>
+        
+        <h2 class="section-title">
+            <span class="title-part">ГЕНЕРАТОР</span>
+            <span class="title-part accent">ИДЕЙ</span>
+            <span class="title-part">FAMLAB</span>
+            <span class="title-part highlight">В ДЕЙСТВИИ</span>
+        </h2>
+        
+        <!-- Генератор идей FamLab -->
+        <div class="famlab-idea-generator">
+            <div class="generator-header">
+                <h3>💡 Попробуй генератор идей FamLab прямо сейчас!</h3>
+                <p>Выбери категорию и получи конкретные, практические идеи для внедрения AI</p>
+            </div>
+            
+            <div class="generator-container">
+                <div class="category-selection">
+                    <select id="category-select" class="category-dropdown">
+                        <option value="">Выбери интересную тебе область...</option>
+                        <option value="automation">🤖 Автоматизация рутины</option>
+                        <option value="content">📝 AI в создании контента</option>
+                        <option value="analysis">📊 Анализ данных с AI</option>
+                        <option value="coding">💻 AI-помощники в программировании</option>
+                        <option value="business">💼 AI для бизнес-процессов</option>
+                        <option value="learning">🎓 Обучение с AI-тренерами</option>
+                    </select>
+                    <button id="generate-btn" class="generate-button" disabled>
+                        <i class="fas fa-lightbulb"></i>
+                        Генерировать идеи
+                    </button>
+                </div>
+                
+                <div class="processing-visual" id="processing">
+                    <div class="ai-brain">
+                        <div class="brain-node"></div>
+                        <div class="brain-node"></div>
+                        <div class="brain-node"></div>
+                        <div class="brain-node"></div>
+                        <div class="brain-connections"></div>
+                    </div>
+                    <div class="processing-text">Генерирую идеи для тебя...</div>
+                </div>
+                
+                <div class="results-section" id="results">
+                    <div class="result-card">
+                        <h4>🎯 Идея для старта</h4>
+                        <p id="idea-start">Начни с простого AI-чат-бота для FAQ</p>
+                    </div>
+                    <div class="result-card">
+                        <h4>🛠️ Инструменты</h4>
+                        <p id="idea-tools">ChatGPT + Zapier для автоматизации</p>
+                    </div>
+                    <div class="result-card">
+                        <h4>🎓 Следующий шаг</h4>
+                        <p id="idea-next">Изучи промпт-инжиниринг в FamLab</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Шаги изучения AI в FamLab -->
+        <div class="demo-pipeline">
+            <div class="pipeline-step" data-step="1">
+                <div class="step-icon">
+                    <i class="fas fa-user-plus"></i>
+                </div>
+                <h3>Присоединяешься</h3>
+                <p>Вступаешь в закрытое сообщество FamLab</p>
+            </div>
+            
+            <div class="pipeline-arrow">
+                <div class="arrow-line"></div>
+                <div class="arrow-head"></div>
+            </div>
+            
+            <div class="pipeline-step" data-step="2">
+                <div class="step-icon">
+                    <i class="fas fa-hands-helping"></i>
+                </div>
+                <h3>Изучаешь и практикуешься</h3>
+                <p>Получаешь знания и сразу внедряешь их</p>
+            </div>
+            
+            <div class="pipeline-arrow">
+                <div class="arrow-line"></div>
+                <div class="arrow-head"></div>
+            </div>
+            
+            <div class="pipeline-step" data-step="3">
+                <div class="step-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h3>Результат</h3>
+                <p>Становишься экспертом по AI-автоматизации</p>
+            </div>
+        </div>
+    </section>
     
     <!-- Hero Section JavaScript -->
     <script src="src/js/hero.js"></script>
@@ -118,6 +217,8 @@
             
             // Инициализируем Demo Generator
             setTimeout(() => initializeFamLabGenerator(), 300);
+            setTimeout(() => initializeDemoSectionTitle(), 800);
+            setTimeout(() => initializePipelineAnimation(), 1000);
             
             // Добавляем глобальные улучшения
             initializeGlobalEnhancements();

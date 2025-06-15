@@ -1,3 +1,45 @@
+// Инициализация анимации заголовка секции
+function initializeDemoSectionTitle() {
+    const titleParts = document.querySelectorAll('#screen2 .title-part');
+    
+    titleParts.forEach((part, index) => {
+        setTimeout(() => {
+            part.style.opacity = '1';
+            part.style.transform = 'translateY(0)';
+            part.style.transition = 'all 0.8s ease-out';
+        }, index * 200);
+    });
+}
+
+// Инициализация анимации pipeline шагов
+function initializePipelineAnimation() {
+    const pipelineSteps = document.querySelectorAll('.pipeline-step');
+    const pipelineArrows = document.querySelectorAll('.pipeline-arrow');
+    
+    // Intersection Observer для анимации при скролле
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const step = entry.target;
+                const stepIndex = Array.from(pipelineSteps).indexOf(step);
+                
+                setTimeout(() => {
+                    step.classList.add('visible');
+                    
+                    // Анимируем стрелку после шага
+                    if (pipelineArrows[stepIndex]) {
+                        setTimeout(() => {
+                            pipelineArrows[stepIndex].style.opacity = '1';
+                        }, 400);
+                    }
+                }, stepIndex * 300);
+            }
+        });
+    }, { threshold: 0.3 });
+    
+    pipelineSteps.forEach(step => observer.observe(step));
+}
+
 // Генератор идей FamLab
 function initializeFamLabGenerator() {
     const categorySelect = document.getElementById('category-select');
