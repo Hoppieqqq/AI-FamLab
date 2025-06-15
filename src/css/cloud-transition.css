@@ -1,528 +1,295 @@
-/* ===== ОБЛАЧНЫЙ ПЕРЕХОД - БАЗОВЫЕ СТИЛИ ===== */
+/* ===== ОБЛАЧНЫЙ ПЕРЕХОД - ЕДИНОЕ ПОЛОТНО ===== */
 
-/* CSS переменные для облачных эффектов */
+/* CSS переменные для элегантного перехода */
 :root {
-    /* Цветовая схема облаков */
-    --cloud-base-color: rgba(0, 255, 136, 0.1);
-    --cloud-highlight-color: rgba(0, 255, 136, 0.3);
-    --cloud-mist-color: rgba(255, 255, 255, 0.05);
-    --cloud-shadow-color: rgba(0, 0, 0, 0.2);
+    /* Цветовая схема */
+    --cloud-primary: rgba(0, 255, 136, 0.15);
+    --cloud-secondary: rgba(0, 255, 136, 0.08);
+    --cloud-mist: rgba(255, 255, 255, 0.12);
+    --cloud-shadow: rgba(0, 0, 0, 0.3);
     
-    /* Градиенты */
-    --cloud-radial-gradient: radial-gradient(
-        ellipse at center,
-        rgba(0, 255, 136, 0.2) 0%,
-        rgba(0, 255, 136, 0.1) 30%,
-        rgba(0, 255, 136, 0.05) 60%,
+    /* Градиенты для плавности */
+    --cloud-gradient: radial-gradient(
+        ellipse 120% 80% at 50% 50%,
+        var(--cloud-primary) 0%,
+        var(--cloud-secondary) 40%,
+        transparent 70%
+    );
+    
+    --mist-gradient: linear-gradient(
+        45deg,
+        transparent 0%,
+        var(--cloud-mist) 30%,
+        var(--cloud-mist) 70%,
         transparent 100%
     );
     
-    /* Размеры и позиции */
-    --cloud-section-height: 100vh;
-    --cloud-layer-z-bg: 1;
-    --cloud-layer-z-mid: 2;
-    --cloud-layer-z-fg: 3;
-    --cloud-particles-z: 4;
-    --cloud-lighting-z: 5;
-    
-    /* Анимационные переменные */
-    --cloud-drift-speed: 60s;
-    --cloud-fade-duration: 2s;
-    --cloud-morph-duration: 8s;
+    /* Размеры */
+    --passage-height: 60vh;
+    --transition-duration: 2s;
 }
 
 /* ===== ОСНОВНОЙ КОНТЕЙНЕР ===== */
-.cloud-transition-system {
+.cloud-passage {
     position: relative;
     width: 100%;
-    height: var(--cloud-section-height);
+    height: var(--passage-height);
     overflow: hidden;
-    background: var(--cloud-radial-gradient);
     
     /* Сокращение дистанции между блоками */
-    margin-top: -20vh;
-    margin-bottom: -20vh;
+    margin-top: -15vh;
+    margin-bottom: -15vh;
     
-    /* Базовые фильтры */
-    filter: brightness(1.1) contrast(1.05);
-}
-
-/* ===== СЛОИ ОБЛАКОВ ===== */
-.cloud-layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-}
-
-/* Фоновый слой */
-.cloud-layer-background {
-    z-index: var(--cloud-layer-z-bg);
-    opacity: 0.6;
-    filter: blur(3px) brightness(0.8);
-}
-
-/* Средний слой */
-.cloud-layer-middle {
-    z-index: var(--cloud-layer-z-mid);
-    opacity: 0.8;
-    filter: blur(1px) brightness(1.1);
-}
-
-/* Передний слой */
-.cloud-layer-foreground {
-    z-index: var(--cloud-layer-z-fg);
-    opacity: 0.9;
-    filter: blur(0.5px) brightness(1.2);
-}
-
-/* ===== ЭЛЕМЕНТЫ ОБЛАКОВ ===== */
-.cloud-element {
-    position: absolute;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    will-change: transform, opacity;
-    
-    /* Базовые размеры */
-    width: 400px;
-    height: 200px;
-    
-    /* Тени и эффекты */
-    filter: drop-shadow(0 10px 20px var(--cloud-shadow-color));
-}
-
-/* Фоновые облака */
-.cloud-bg-1 {
-    background-image: url('../images/clouds/20250615_1557_Portal Cloud Design_simple_compose_01jxstkepjf86awsdk4jr7mbf4_pixian_ai.png');
-    top: 10%;
-    left: -10%;
-    width: 500px;
-    height: 250px;
-    animation: cloudDriftSlow var(--cloud-drift-speed) infinite linear;
-}
-
-.cloud-bg-2 {
-    background-image: url('../images/clouds/20250615_1531_Stylized Cloud Band_simple_compose_01jxss4qrvf1fvnk9x1hh302br_pixian_ai.png');
-    top: 60%;
-    right: -15%;
-    width: 600px;
-    height: 150px;
-    animation: cloudDriftReverse calc(var(--cloud-drift-speed) * 1.2) infinite linear;
-}
-
-.cloud-bg-3 {
-    background-image: url('../images/clouds/20250615_1512_Cartoon Cloud Design_simple_compose_01jxsr1rdreb7t1b0kbbjcgb0n_pixian_ai.png');
-    top: 30%;
-    left: 50%;
-    width: 450px;
-    height: 220px;
-    animation: cloudFloat calc(var(--cloud-drift-speed) * 0.8) infinite ease-in-out;
-}
-
-/* Средние облака */
-.cloud-mid-1 {
-    background-image: url('../images/clouds/20250615_1549_Cloudy Scroll Transition_simple_compose_01jxst62e6esxa41v4470gkm08_pixian_ai.png');
-    top: 20%;
-    left: 20%;
-    width: 350px;
-    height: 180px;
-    animation: cloudMorph var(--cloud-morph-duration) infinite alternate;
-}
-
-.cloud-mid-2 {
-    background-image: url('../images/clouds/20250615_1552_Cartoon Cloud Separator_simple_compose_01jxstaajkf35scpnpm1x2p511_pixian_ai.png');
-    top: 70%;
-    left: 10%;
-    width: 400px;
-    height: 120px;
-    animation: cloudPulse 6s infinite ease-in-out;
-}
-
-.cloud-mid-3 {
-    background-image: url('../images/clouds/20250615_1553_Stylized Cartoon Cloud_simple_compose_01jxstc2ftfzxv2j3qfc543519_pixian_ai.png');
-    top: 40%;
-    right: 20%;
-    width: 380px;
-    height: 190px;
-    animation: cloudWave 10s infinite ease-in-out;
-}
-
-.cloud-mid-4 {
-    background-image: url('../images/clouds/20250615_1549_Cloudy Scroll Transition_simple_compose_01jxst62e7erc96q072qrrf488_pixian_ai.png');
-    top: 5%;
-    right: 5%;
-    width: 320px;
-    height: 160px;
-    animation: cloudTwist 12s infinite linear;
-}
-
-/* Передние облака */
-.cloud-fg-1 {
-    background-image: url('../images/clouds/20250615_1555_Cartoon Cloud Silhouette_simple_compose_01jxsth4qgeszvb7r2qzg5z43j_pixian_ai.png');
-    top: 15%;
-    left: 60%;
-    width: 300px;
-    height: 150px;
-    animation: cloudFade var(--cloud-fade-duration) infinite alternate;
-}
-
-.cloud-fg-2 {
-    background-image: url('../images/clouds/20250615_1552_Cartoon Cloud Separator_simple_compose_01jxstaajmeh4sys6ep0xrm0nv_pixian_ai.png');
-    top: 80%;
-    right: 30%;
-    width: 350px;
-    height: 100px;
-    animation: cloudShimmer 4s infinite ease-in-out;
-}
-
-.cloud-fg-3 {
-    background-image: url('../images/clouds/20250615_1557_Portal Cloud Design_simple_compose_01jxstkepkfr4vysgsyg77jfge_pixian_ai.png');
-    top: 50%;
-    left: 5%;
-    width: 280px;
-    height: 140px;
-    animation: cloudSpiral 15s infinite linear;
-}
-
-/* ===== АНИМАЦИИ ОБЛАКОВ ===== */
-
-/* Медленное дрейфование */
-@keyframes cloudDriftSlow {
-    0% { transform: translateX(-100px) translateY(0px) rotate(0deg); }
-    25% { transform: translateX(50px) translateY(-20px) rotate(2deg); }
-    50% { transform: translateX(100px) translateY(0px) rotate(0deg); }
-    75% { transform: translateX(50px) translateY(20px) rotate(-2deg); }
-    100% { transform: translateX(-100px) translateY(0px) rotate(0deg); }
-}
-
-/* Обратное дрейфование */
-@keyframes cloudDriftReverse {
-    0% { transform: translateX(100px) translateY(0px) rotate(0deg); }
-    25% { transform: translateX(-50px) translateY(15px) rotate(-1deg); }
-    50% { transform: translateX(-100px) translateY(0px) rotate(0deg); }
-    75% { transform: translateX(-50px) translateY(-15px) rotate(1deg); }
-    100% { transform: translateX(100px) translateY(0px) rotate(0deg); }
-}
-
-/* Плавание */
-@keyframes cloudFloat {
-    0%, 100% { transform: translateY(0px) scale(1); }
-    50% { transform: translateY(-30px) scale(1.05); }
-}
-
-/* Морфинг */
-@keyframes cloudMorph {
-    0% { transform: scaleX(1) scaleY(1) skewX(0deg); }
-    50% { transform: scaleX(1.1) scaleY(0.9) skewX(2deg); }
-    100% { transform: scaleX(1) scaleY(1) skewX(0deg); }
-}
-
-/* Пульсация */
-@keyframes cloudPulse {
-    0%, 100% { opacity: 0.8; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.1); }
-}
-
-/* Волна */
-@keyframes cloudWave {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    25% { transform: translateY(-15px) rotate(1deg); }
-    75% { transform: translateY(15px) rotate(-1deg); }
-}
-
-/* Скручивание */
-@keyframes cloudTwist {
-    0% { transform: rotate(0deg) scale(1); }
-    50% { transform: rotate(180deg) scale(1.05); }
-    100% { transform: rotate(360deg) scale(1); }
-}
-
-/* Затухание */
-@keyframes cloudFade {
-    0% { opacity: 0.9; }
-    100% { opacity: 0.6; }
-}
-
-/* Мерцание */
-@keyframes cloudShimmer {
-    0%, 100% { filter: brightness(1) drop-shadow(0 5px 15px var(--cloud-shadow-color)); }
-    50% { filter: brightness(1.3) drop-shadow(0 8px 25px var(--cloud-highlight-color)); }
-}
-
-/* Спираль */
-@keyframes cloudSpiral {
-    0% { transform: rotate(0deg) translateX(20px) rotate(0deg); }
-    100% { transform: rotate(360deg) translateX(20px) rotate(-360deg); }
-}
-
-/* ===== СИСТЕМА ЧАСТИЦ ===== */
-.particle-system-3d {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: var(--cloud-particles-z);
-    pointer-events: none;
-}
-
-#cloud-particles-canvas {
-    width: 100%;
-    height: 100%;
-    opacity: 0.7;
-    mix-blend-mode: screen;
-}
-
-/* ===== ЭФФЕКТЫ ОСВЕЩЕНИЯ ===== */
-.lighting-effects {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: var(--cloud-lighting-z);
-    pointer-events: none;
-}
-
-.light-ray {
-    position: absolute;
+    /* Базовый фон */
     background: linear-gradient(
-        45deg,
+        180deg,
         transparent 0%,
-        var(--cloud-highlight-color) 50%,
+        rgba(0, 255, 136, 0.05) 50%,
         transparent 100%
     );
-    opacity: 0.3;
-    animation: lightRayMove 8s infinite ease-in-out;
+    
+    /* Плавность появления */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all var(--transition-duration) ease-out;
 }
 
-.light-ray-1 {
-    top: 10%;
-    left: 20%;
-    width: 200px;
-    height: 2px;
-    animation-delay: 0s;
+.cloud-passage.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.light-ray-2 {
-    top: 60%;
-    right: 30%;
-    width: 150px;
-    height: 1px;
-    animation-delay: 2s;
-}
-
-.light-ray-3 {
-    top: 80%;
-    left: 50%;
-    width: 180px;
-    height: 1.5px;
-    animation-delay: 4s;
-}
-
-.ambient-glow {
+/* ===== ОБЛАЧНОЕ ПОЛОТНО ===== */
+.cloud-canvas {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 80%;
-    height: 80%;
-    transform: translate(-50%, -50%);
-    background: var(--cloud-radial-gradient);
-    opacity: 0.4;
-    animation: ambientPulse 6s infinite ease-in-out;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
-@keyframes lightRayMove {
-    0%, 100% { opacity: 0.1; transform: translateX(0px); }
-    50% { opacity: 0.4; transform: translateX(50px); }
+/* ===== ОБЛАЧНЫЕ МАССЫ ===== */
+.cloud-mass {
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    border-radius: 50%;
+    filter: blur(40px);
+    opacity: 0;
+    will-change: transform, opacity;
 }
 
-@keyframes ambientPulse {
-    0%, 100% { opacity: 0.3; transform: translate(-50%, -50%) scale(1); }
-    50% { opacity: 0.5; transform: translate(-50%, -50%) scale(1.1); }
+.primary-cloud {
+    top: -10%;
+    left: -10%;
+    background: var(--cloud-gradient);
+    animation: cloudFlow 8s ease-in-out infinite alternate;
+}
+
+.secondary-cloud {
+    top: -5%;
+    right: -15%;
+    background: var(--cloud-gradient);
+    animation: cloudFlow 10s ease-in-out infinite alternate-reverse;
+    animation-delay: -2s;
+}
+
+/* ===== ТУМАННЫЕ СЛОИ ===== */
+.mist-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--mist-gradient);
+    opacity: 0;
+    will-change: transform, opacity;
+}
+
+.mist-front {
+    z-index: 2;
+    animation: mistDrift 12s linear infinite;
+}
+
+.mist-back {
+    z-index: 1;
+    animation: mistDrift 15s linear infinite reverse;
+    animation-delay: -5s;
 }
 
 /* ===== ГРАДИЕНТНЫЕ ПЕРЕХОДЫ ===== */
-.gradient-overlay {
+.transition-gradient {
     position: absolute;
-    left: 0;
     width: 100%;
     height: 30%;
+    z-index: 3;
     pointer-events: none;
-    z-index: 6;
 }
 
-.gradient-top {
+.gradient-entry {
     top: 0;
     background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.8) 0%,
-        rgba(0, 0, 0, 0.4) 50%,
+        180deg,
+        rgba(0, 0, 0, 0.1) 0%,
         transparent 100%
     );
 }
 
-.gradient-bottom {
+.gradient-exit {
     bottom: 0;
     background: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0.8) 0%,
-        rgba(0, 0, 0, 0.4) 50%,
+        0deg,
+        rgba(0, 0, 0, 0.1) 0%,
         transparent 100%
     );
 }
 
-/* ===== ИНТЕРАКТИВНЫЕ ЗОНЫ ===== */
-.interaction-zones {
+/* ===== ИНДИКАТОР ПРОГРЕССА ===== */
+.passage-progress {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    overflow: hidden;
+    z-index: 4;
+}
+
+.progress-indicator {
+    width: 0%;
     height: 100%;
-    z-index: 7;
+    background: linear-gradient(
+        90deg,
+        var(--cloud-primary),
+        rgba(0, 255, 136, 0.8)
+    );
+    border-radius: 2px;
+    transition: width 0.3s ease-out;
 }
 
-.interaction-zone {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    cursor: pointer;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+/* ===== АНИМАЦИИ ===== */
+
+/* Плавное течение облаков */
+@keyframes cloudFlow {
+    0% {
+        transform: translateX(-20px) translateY(-10px) scale(1);
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateX(20px) translateY(10px) scale(1.05);
+        opacity: 0.4;
+    }
 }
 
-.zone-left {
-    left: 0;
-    width: 33.33%;
-}
-
-.zone-center {
-    left: 33.33%;
-    width: 33.34%;
-}
-
-.zone-right {
-    right: 0;
-    width: 33.33%;
-}
-
-.interaction-zone:hover {
-    opacity: 0.1;
-    background: var(--cloud-highlight-color);
+/* Дрейф тумана */
+@keyframes mistDrift {
+    0% {
+        transform: translateX(-100%) rotate(0deg);
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateX(100%) rotate(5deg);
+        opacity: 0.2;
+    }
 }
 
 /* ===== АДАПТИВНОСТЬ ===== */
 
 /* Планшеты */
 @media (max-width: 1199px) {
-    .cloud-element {
-        width: 300px;
-        height: 150px;
+    :root {
+        --passage-height: 50vh;
     }
     
-    .cloud-bg-1, .cloud-bg-2, .cloud-bg-3 {
-        width: 350px;
-        height: 175px;
+    .cloud-mass {
+        filter: blur(30px);
     }
     
-    .particle-system-3d {
-        opacity: 0.5;
+    .cloud-passage {
+        margin-top: -10vh;
+        margin-bottom: -10vh;
     }
 }
 
 /* Мобильные устройства */
 @media (max-width: 767px) {
     :root {
-        --cloud-section-height: 60vh;
-        --cloud-drift-speed: 40s;
+        --passage-height: 40vh;
+        --transition-duration: 1.5s;
     }
     
-    .cloud-transition-system {
-        margin-top: -10vh;
-        margin-bottom: -10vh;
+    .cloud-mass {
+        filter: blur(20px);
+        animation-duration: 6s;
     }
     
-    .cloud-element {
-        width: 200px;
-        height: 100px;
+    .mist-layer {
+        animation-duration: 8s;
     }
     
-    .cloud-bg-1, .cloud-bg-2, .cloud-bg-3 {
-        width: 250px;
-        height: 125px;
+    .cloud-passage {
+        margin-top: -8vh;
+        margin-bottom: -8vh;
     }
     
-    /* Упрощенные эффекты для мобильных */
-    .cloud-layer-background {
-        filter: blur(2px) brightness(0.9);
-    }
-    
-    .cloud-layer-middle {
-        filter: blur(1px) brightness(1.05);
-    }
-    
-    .cloud-layer-foreground {
-        filter: none;
-    }
-    
-    /* Отключение тяжелых анимаций */
-    .particle-system-3d {
-        display: none;
-    }
-    
-    .lighting-effects {
-        opacity: 0.5;
-    }
-    
-    /* Упрощенные анимации */
-    .cloud-element {
-        animation-duration: calc(var(--cloud-drift-speed) * 0.5) !important;
+    .passage-progress {
+        width: 80px;
+        height: 3px;
     }
 }
 
-/* Очень маленькие экраны */
-@media (max-width: 480px) {
-    :root {
-        --cloud-section-height: 40vh;
-    }
-    
-    .cloud-element {
-        width: 150px;
-        height: 75px;
-    }
-    
-    .lighting-effects {
-        display: none;
-    }
-}
-
-/* ===== ПРОИЗВОДИТЕЛЬНОСТЬ ===== */
-
-/* GPU ускорение для всех анимированных элементов */
-.cloud-element,
-.light-ray,
-.ambient-glow,
-.gradient-overlay {
-    transform: translateZ(0);
-    backface-visibility: hidden;
-    perspective: 1000px;
-}
-
-/* Оптимизация для слабых устройств */
+/* Уменьшенная анимация для пользователей с ограниченными возможностями */
 @media (prefers-reduced-motion: reduce) {
-    .cloud-element {
-        animation: none !important;
+    .cloud-mass,
+    .mist-layer {
+        animation: none;
     }
     
-    .light-ray,
-    .ambient-glow {
-        animation: none !important;
+    .cloud-passage {
+        transition-duration: 0.3s;
     }
     
-    .particle-system-3d {
-        display: none;
+    .progress-indicator {
+        transition-duration: 0.1s;
     }
+}
+
+/* ===== СОСТОЯНИЯ ПЕРЕХОДА ===== */
+
+/* Вход в облака */
+.cloud-passage.entering .cloud-mass {
+    opacity: 0.8;
+    animation-play-state: running;
+}
+
+.cloud-passage.entering .mist-layer {
+    opacity: 0.6;
+}
+
+/* Полное погружение */
+.cloud-passage.immersed .cloud-mass {
+    opacity: 1;
+    filter: blur(60px);
+}
+
+.cloud-passage.immersed .mist-layer {
+    opacity: 0.8;
+}
+
+/* Выход из облаков */
+.cloud-passage.exiting .cloud-mass {
+    opacity: 0.4;
+    transform: scale(1.2);
+}
+
+.cloud-passage.exiting .mist-layer {
+    opacity: 0.3;
 } 

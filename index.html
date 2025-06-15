@@ -104,51 +104,25 @@
     </section>
     
     <!-- Облачный переход между Hero и AI Evolution -->
-    <section id="cloud-transition" class="cloud-transition-system">
-        <!-- Фоновый слой облаков -->
-        <div class="cloud-layer cloud-layer-background">
-            <div class="cloud-element cloud-bg-1" data-cloud="portal-design-1"></div>
-            <div class="cloud-element cloud-bg-2" data-cloud="stylized-band"></div>
-            <div class="cloud-element cloud-bg-3" data-cloud="cartoon-design"></div>
+    <section id="cloud-transition" class="cloud-passage">
+        <!-- Единое облачное полотно -->
+        <div class="cloud-canvas">
+            <!-- Основная облачная масса -->
+            <div class="cloud-mass primary-cloud"></div>
+            <div class="cloud-mass secondary-cloud"></div>
+            
+            <!-- Туманные слои для глубины -->
+            <div class="mist-layer mist-front"></div>
+            <div class="mist-layer mist-back"></div>
         </div>
         
-        <!-- Средний слой облаков -->
-        <div class="cloud-layer cloud-layer-middle">
-            <div class="cloud-element cloud-mid-1" data-cloud="cloudy-transition-1"></div>
-            <div class="cloud-element cloud-mid-2" data-cloud="cartoon-separator-1"></div>
-            <div class="cloud-element cloud-mid-3" data-cloud="stylized-cartoon"></div>
-            <div class="cloud-element cloud-mid-4" data-cloud="cloudy-transition-2"></div>
-        </div>
+        <!-- Градиентные переходы для плавности -->
+        <div class="transition-gradient gradient-entry"></div>
+        <div class="transition-gradient gradient-exit"></div>
         
-        <!-- Передний слой облаков -->
-        <div class="cloud-layer cloud-layer-foreground">
-            <div class="cloud-element cloud-fg-1" data-cloud="cloud-silhouette"></div>
-            <div class="cloud-element cloud-fg-2" data-cloud="cartoon-separator-2"></div>
-            <div class="cloud-element cloud-fg-3" data-cloud="portal-design-2"></div>
-        </div>
-        
-        <!-- 3D система частиц -->
-        <div class="particle-system-3d" id="cloud-particles-container">
-            <canvas id="cloud-particles-canvas"></canvas>
-        </div>
-        
-        <!-- Эффекты освещения -->
-        <div class="lighting-effects">
-            <div class="light-ray light-ray-1"></div>
-            <div class="light-ray light-ray-2"></div>
-            <div class="light-ray light-ray-3"></div>
-            <div class="ambient-glow"></div>
-        </div>
-        
-        <!-- Градиентные переходы -->
-        <div class="gradient-overlay gradient-top"></div>
-        <div class="gradient-overlay gradient-bottom"></div>
-        
-        <!-- Интерактивные зоны для мыши -->
-        <div class="interaction-zones">
-            <div class="interaction-zone zone-left" data-direction="left"></div>
-            <div class="interaction-zone zone-right" data-direction="right"></div>
-            <div class="interaction-zone zone-center" data-direction="center"></div>
+        <!-- Индикатор прогресса перехода -->
+        <div class="passage-progress">
+            <div class="progress-indicator"></div>
         </div>
     </section>
 

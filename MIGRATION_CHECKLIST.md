@@ -6,7 +6,7 @@
 - [x] Hero Section (секция 1) - `#screen1`
 - [x] Demo Generator (секция 2) - `#screen2`
 - [x] AI Evolution Concept - `#ai-evolution-concept`
-- [x] Cloud Transition - `#cloudTransition` - Облачный переход с GSAP + Three.js
+- [x] Cloud Transition - `#cloudTransition` - **ПЕРЕСОБРАН**: Элегантный единый переход вместо хаотичных облаков
 - [ ] Comparison Section - `#comparison-section`
 - [ ] Pricing Section (секция 3) - `#screen3`
 
@@ -26,7 +26,7 @@
 - [x] `base.css` - Базовые стили
 - [x] `demo-generator.css` - Стили демо-генератора
 - [x] `ai-evolution.css` - Стили блока эволюции AI
-- [x] `cloud-transition.css` - Стили облака-перехода
+- [x] `cloud-transition.css` - **ПЕРЕСОБРАН**: Элегантные стили единого облачного перехода (было 528 строк → стало 280 строк)
 - [ ] `comparison.css` - Стили сравнительной таблицы
 - [ ] `pricing.css` - Стили секции с ценами
 
@@ -34,7 +34,7 @@
 - [x] `hero.js` - Логика hero секции (основатель, статистика)
 - [x] `demo-generator.js` - Логика генератора идей
 - [x] `ai-evolution.js` - Логика блока эволюции (GSAP анимации)
-- [x] `cloud-transition.js` - Логика облака-перехода (GSAP + Three.js)
+- [x] `cloud-transition.js` - **ПЕРЕСОБРАН**: Упрощенная логика элегантного перехода (было 690 строк → стало 180 строк)
 - [ ] `comparison.js` - Логика сравнительной таблицы
 - [ ] `pricing.js` - Логика секции с ценами (таймер, отзывы)
 - [ ] `thought-bubbles.js` - Плавающие мыслепузыри
