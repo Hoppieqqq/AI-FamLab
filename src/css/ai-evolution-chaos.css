@@ -1,0 +1,43 @@
+/* ================================
+   AI EVOLUTION БЛОК - CHAOS 3D CARDS - ДОПОЛНИТЕЛЬНЫЕ ЭФФЕКТЫ
+   ================================ */
+
+/* ДОПОЛНИТЕЛЬНЫЕ ЭФФЕКТЫ КАРТОЧЕК */
+.meme-card:hover {
+    filter: brightness(1.1) saturate(1.2) !important;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+}
+
+/* РАСШИРЕННАЯ АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ */
+@media (max-width: 480px) {
+  .meme-card {
+    width: clamp(120px, 85vw, 240px) !important;
+    height: clamp(120px, 85vw, 240px) !important;
+  }
+  
+  .insight-text h4 {
+    font-size: 1.1rem;
+  }
+  
+  .insight-text p {
+    font-size: 0.9rem;
+  }
+}
+
+/* ИСПРАВЛЕНИЕ БАГА: убираем квадратное выделение карточек */
+.meme-card,
+.meme-card:focus,
+.meme-card:active,
+.card-inner,
+.card-inner:focus,
+.card-inner:active {
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+/* Убираем outline для всех интерактивных элементов внутри карточек */
+.meme-card *,
+.meme-card *:focus,
+.meme-card *:active {
+    outline: none !important;
+} 

@@ -1,3 +1,102 @@
+/**
+ * Demo Generator JavaScript
+ */
+
+function initializeDemoGenerator() {
+    console.log('🚀 Инициализация Demo Generator');
+    
+    const categorySelect = document.getElementById('category-select');
+    const generateBtn = document.getElementById('generate-btn');
+    const processing = document.getElementById('processing');
+    const results = document.getElementById('results');
+    
+    if (!categorySelect || !generateBtn) {
+        console.warn('Demo Generator элементы не найдены');
+        return;
+    }
+    
+    // Активируем кнопку при выборе категории
+    categorySelect.addEventListener('change', function() {
+        generateBtn.disabled = !this.value;
+    });
+    
+    // Обработка генерации
+    generateBtn.addEventListener('click', function() {
+        if (categorySelect.value) {
+            generateIdeas(categorySelect.value);
+        }
+    });
+    
+    console.log('✅ Demo Generator инициализирован');
+}
+
+function generateIdeas(category) {
+    const processing = document.getElementById('processing');
+    const results = document.getElementById('results');
+    
+    if (processing) processing.style.display = 'block';
+    if (results) results.style.display = 'none';
+    
+    // Симуляция генерации
+    setTimeout(() => {
+        if (processing) processing.style.display = 'none';
+        if (results) results.style.display = 'block';
+        
+        // Обновляем содержимое в зависимости от категории
+        updateIdeaContent(category);
+    }, 2000);
+}
+
+function updateIdeaContent(category) {
+    const ideaStart = document.getElementById('idea-start');
+    const ideaTools = document.getElementById('idea-tools'); 
+    const ideaNext = document.getElementById('idea-next');
+    
+    const ideas = {
+        automation: {
+            start: 'Автоматизируй email-рассылки с помощью AI',
+            tools: 'MailChimp + GPT для персонализации',
+            next: 'Изучи автоматизацию соцсетей в FamLab'
+        },
+        content: {
+            start: 'Создавай контент-планы с AI-помощником',
+            tools: 'ChatGPT + Notion для организации',
+            next: 'Освой копирайтинг с AI в FamLab'
+        },
+        analysis: {
+            start: 'Анализируй данные клиентов с AI',
+            tools: 'Google Sheets + AI-плагины',
+            next: 'Изучи продвинутую аналитику в FamLab'
+        },
+        coding: {
+            start: 'Используй AI для написания кода',
+            tools: 'GitHub Copilot + ChatGPT',
+            next: 'Освой промпты для программирования в FamLab'
+        },
+        business: {
+            start: 'Автоматизируй бизнес-процессы с AI',
+            tools: 'Zapier + AI боты',
+            next: 'Изучи AI-стратегии для бизнеса в FamLab'
+        },
+        learning: {
+            start: 'Создай персонального AI-наставника',
+            tools: 'Custom GPT + учебные материалы',
+            next: 'Построй систему обучения с AI в FamLab'
+        }
+    };
+    
+    const selectedIdeas = ideas[category] || ideas.automation;
+    
+    if (ideaStart) ideaStart.textContent = selectedIdeas.start;
+    if (ideaTools) ideaTools.textContent = selectedIdeas.tools;
+    if (ideaNext) ideaNext.textContent = selectedIdeas.next;
+}
+
+// Экспорт функции
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = { initializeDemoGenerator };
+}
+
 // Инициализация анимации заголовка секции
 function initializeDemoSectionTitle() {
     const titleParts = document.querySelectorAll('#screen2 .title-part');

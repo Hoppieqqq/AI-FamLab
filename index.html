@@ -6,16 +6,13 @@
     <title>AI FamLab - Закрытый клуб для изучения AI</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
-    <!-- GSAP для мощных анимаций -->
+    
+    <!-- Motion.dev для современных анимаций -->
+    <script src="https://cdn.jsdelivr.net/npm/motion@11.11.13/dist/motion.js"></script>
+    
+    <!-- GSAP для дополнительных эффектов -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13/dist/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13/dist/MotionPathPlugin.min.js"></script>
-    
-    <!-- Three.js для 3D эффектов -->
-    <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
-    
-    <!-- Canvas Confetti для эффектов -->
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
     
     <!-- CSS переменные и базовые стили -->
     <link rel="stylesheet" href="src/css/variables.css">
@@ -30,8 +27,10 @@
     <!-- AI Evolution стили -->
     <link rel="stylesheet" href="src/css/ai-evolution.css">
     
-    <!-- Cloud Transition стили -->
-    <link rel="stylesheet" href="src/css/cloud-transition.css">
+    <!-- AI Evolution 3D Chaos эффекты -->
+    <link rel="stylesheet" href="src/css/ai-evolution-chaos.css">
+    
+
 </head>
 <body>
     <!-- Контейнер для плавающих мыслепузырей -->
@@ -89,7 +88,7 @@
                     </div>
                 </div>
                 
-                <a href="#screen3" class="cta-button hero-cta">
+                <a href="#ai-evolution" class="cta-button hero-cta">
                     <span>СТАТЬ ЧАСТЬЮ КЛУБА</span>
                     <div class="button-particles"></div>
                     <i class="fas fa-users"></i>
@@ -102,60 +101,22 @@
             <span>Скролл</span>
         </div>
     </section>
-    
-    <!-- Облачный переход между Hero и AI Evolution -->
-    <section id="cloud-transition" class="cloud-passage">
-        <!-- Единое облачное полотно -->
-        <div class="cloud-canvas">
-            <!-- Основная облачная масса -->
-            <div class="cloud-mass primary-cloud"></div>
-            <div class="cloud-mass secondary-cloud"></div>
-            
-            <!-- Туманные слои для глубины -->
-            <div class="mist-layer mist-front"></div>
-            <div class="mist-layer mist-back"></div>
-        </div>
-        
-        <!-- Градиентные переходы для плавности -->
-        <div class="transition-gradient gradient-entry"></div>
-        <div class="transition-gradient gradient-exit"></div>
-        
-        <!-- Индикатор прогресса перехода -->
-        <div class="passage-progress">
-            <div class="progress-indicator"></div>
-        </div>
-    </section>
 
-    <!-- Концептуальный блок: Эволюция AI-мышления -->
-    <div id="ai-evolution-concept" class="ai-evolution-container">
-        <!-- Фоновые частицы и эффекты -->
-        <div class="evolution-bg">
-            <div class="neural-particles"></div>
-            <div class="data-streams"></div>
-            <div class="quantum-field"></div>
-        </div>
-        
-        <!-- Главный контент -->
-        <div class="evolution-content">
-            <!-- Заголовок с морфинг-эффектом -->
-            <div class="concept-header">
-                <h2 class="morphing-title" id="morphingTitle">
-                    <span class="title-layer">ЭВОЛЮЦИЯ</span>
-                    <span class="title-layer accent">AI-МЫШЛЕНИЯ</span>
-                    <span class="title-layer glow">В FAMLAB</span>
-                </h2>
-                <div class="interaction-hint" id="interactionHint">
-                    <span class="hint-text">Наведи курсор на карточки</span>
-                </div>
-                <div class="title-particles"></div>
+    <!-- Концептуальный блок: Эволюция AI-мышления с мемами (3D CHAOS STYLE) -->
+    <section id="ai-evolution" class="ai-evolution-section">
+        <div class="ai-evolution-content">
+            <!-- Заголовок секции -->
+            <div class="section-title">
+                <h2>Эволюция AI-мышления в FamLab</h2>
             </div>
             
             <!-- Интерактивные мемы с 3D эффектами -->
             <div class="memes-3d-space" id="memes3DSpace">
-                <div class="meme-card floating-3d" data-depth="0.1" style="--x: 15%; --y: 20%; --rotation: -8deg;">
+                <!-- Левая колонка: карточка 1 (повернута на +15deg) -->
+                <div class="meme-card floating-3d" data-depth="0.1" style="--x: 20%; --y: 5%; --rotation: 15deg;">
                     <div class="card-inner">
                         <div class="card-front">
-                            <img src="Image meme/ChatGPT Image 15 июн. 2025 г., 11_39_45_pixian_ai.png" alt="AI Evolution" class="meme-img-3d">
+                            <img src="Image meme 2/20250615_1359_Легендарный мем стилизован_remix_01jxskvj8wft48kz0tjz9ktvfh.png" alt="AI Evolution" class="meme-img-3d">
                             <div class="hologram-overlay"></div>
                         </div>
                         <div class="card-back">
@@ -170,10 +131,11 @@
                     </div>
                 </div>
                 
-                <div class="meme-card floating-3d" data-depth="0.2" style="--x: 65%; --y: 15%; --rotation: 12deg;">
+                <!-- Правая колонка: карточка 2 (повернута на -15deg) -->
+                <div class="meme-card floating-3d" data-depth="0.2" style="--x: 60%; --y: 20%; --rotation: -15deg;">
                     <div class="card-inner">
                         <div class="card-front">
-                            <img src="Image meme/ChatGPT Image 15 июн. 2025 г., 12_02_53_pixian_ai.png" alt="AI Learning" class="meme-img-3d">
+                            <img src="Image meme 2/20250615_1417_Легендарный мем ИИ_remix_01jxsmvtdtex1bvcmn0wns0ggn.png" alt="AI Learning" class="meme-img-3d">
                             <div class="hologram-overlay"></div>
                         </div>
                         <div class="card-back">
@@ -188,10 +150,11 @@
                     </div>
                 </div>
                 
-                <div class="meme-card floating-3d" data-depth="0.15" style="--x: 25%; --y: 55%; --rotation: -15deg;">
+                <!-- Левая колонка: карточка 3 (повернута на +15deg) -->
+                <div class="meme-card floating-3d" data-depth="0.15" style="--x: 22%; --y: 40%; --rotation: 15deg;">
                     <div class="card-inner">
                         <div class="card-front">
-                            <img src="Image meme/1111.png" alt="AI Mastery" class="meme-img-3d">
+                            <img src="Image meme 2/20250615_1442_Выбор между AI опциями_remix_01jxspajqneh2888pq941a82sm.png" alt="AI Mastery" class="meme-img-3d">
                             <div class="hologram-overlay"></div>
                         </div>
                         <div class="card-back">
@@ -206,10 +169,11 @@
                     </div>
                 </div>
                 
-                <div class="meme-card floating-3d" data-depth="0.25" style="--x: 70%; --y: 65%; --rotation: 8deg;">
+                <!-- Правая колонка: карточка 4 (повернута на -15deg) -->
+                <div class="meme-card floating-3d" data-depth="0.25" style="--x: 61%; --y: 55%; --rotation: -15deg;">
                     <div class="card-inner">
                         <div class="card-front">
-                            <img src="Image meme/22222.png" alt="AI Expert" class="meme-img-3d">
+                            <img src="Image meme 2/ChatGPT Image 15 июн. 2025 г., 13_39_05.png" alt="AI Expert" class="meme-img-3d">
                             <div class="hologram-overlay"></div>
                         </div>
                         <div class="card-back">
@@ -224,10 +188,11 @@
                     </div>
                 </div>
                 
-                <div class="meme-card floating-3d" data-depth="0.3" style="--x: 45%; --y: 35%; --rotation: -5deg;">
+                <!-- Левая колонка: карточка 5 (повернута на +15deg) -->
+                <div class="meme-card floating-3d" data-depth="0.3" style="--x: 24%; --y: 75%; --rotation: 15deg;">
                     <div class="card-inner">
                         <div class="card-front">
-                            <img src="Image meme/ChatGPT Image 15 июн. 2025 г., 12_35_20.png" alt="AI Master" class="meme-img-3d">
+                            <img src="Image meme 2/ChatGPT Image 15 июн. 2025 г., 13_59_04.png" alt="AI Master" class="meme-img-3d">
                             <div class="hologram-overlay"></div>
                         </div>
                         <div class="card-back">
@@ -242,28 +207,8 @@
                     </div>
                 </div>
             </div>
-            
-
-            
-            <!-- Призыв к действию с частицами -->
-            <div class="concept-cta">
-                <div class="cta-text">
-                    <h3>Готов эволюционировать?</h3>
-                    <p>Присоединяйся к закрытому клубу AI-практиков</p>
-                </div>
-                <button class="evolution-button" id="evolutionBtn">
-                    <span class="btn-text">НАЧАТЬ ЭВОЛЮЦИЮ</span>
-                    <div class="btn-particles"></div>
-                    <div class="btn-glow"></div>
-                </button>
-            </div>
         </div>
-        
-        <!-- Переход к следующему блоку -->
-        <div class="concept-transition" id="conceptTransition">
-            <div class="transition-wave"></div>
-        </div>
-    </div>
+    </section>
     
     <!-- Секция 2: Интерактивная демонстрация с мини-игрой -->
     <section id="screen2" class="full-screen-section">
@@ -375,9 +320,6 @@
     <!-- AI Evolution JavaScript -->
     <script src="src/js/ai-evolution.js"></script>
     
-    <!-- Cloud Transition JavaScript -->
-    <script src="src/js/cloud-transition.js"></script>
-    
     <!-- Инициализация Hero Section -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -390,18 +332,10 @@
             setTimeout(() => initializeThoughtBubbles(), 700);
             
             // Инициализируем Demo Generator
-            setTimeout(() => initializeFamLabGenerator(), 300);
-            setTimeout(() => initializeDemoSectionTitle(), 800);
-            setTimeout(() => initializePipelineAnimation(), 1000);
+            setTimeout(() => initializeDemoGenerator(), 1000);
             
-            // Инициализируем AI Evolution
-            setTimeout(() => initializeAIEvolutionSection(), 400);
-            setTimeout(() => initializeMemeInteractions(), 900);
-            setTimeout(() => enhanceEvolutionButton(), 1100);
-            setTimeout(() => initializeCloudTransition(), 1200);
-            
-            // Добавляем глобальные улучшения
-            initializeGlobalEnhancements();
+            // Инициализируем AI Evolution с Motion.dev
+            setTimeout(() => initializeAIEvolution(), 1200);
         });
     </script>
 </body>

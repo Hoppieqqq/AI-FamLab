@@ -1,0 +1,68 @@
+/* ===================================================
+   AI EVOLUTION 3D ENHANCEMENT - ОТКЛЮЧЕН
+   ================================================== */
+
+/* ФАЙЛ ОТКЛЮЧЕН - НЕ ЗАГРУЖАЕТСЯ В HTML */
+/* Все эффекты перенесены в ai-evolution.css и ai-evolution-chaos.css */
+
+/* ДОПОЛНИТЕЛЬНЫЕ 3D ЭФФЕКТЫ ДЛЯ КАРТОЧЕК */
+.meme-card {
+    /* Добавляем 3D контекст БЕЗ конфликтов */
+    transform-style: preserve-3d;
+    will-change: transform;
+    position: relative;
+    overflow: visible !important;
+}
+
+/* ОТКЛЮЧЕНЫ ВСЕ КОНФЛИКТУЮЩИЕ HOVER ЭФФЕКТЫ */
+.meme-card::before {
+    display: none !important;
+}
+
+.meme-card:hover::before {
+    display: none !important;
+}
+
+/* УБРАН БЛОКИРУЮЩИЙ HOVER ЭФФЕКТ */
+/* .meme-card:hover - правило удалено для предотвращения конфликтов */
+
+/* УБРАНЫ ВСЕ 3D СЛОИ КОТОРЫЕ МЕШАЛИ */
+/* .card-content - правило удалено */
+
+/* УБРАНЫ КОНФЛИКТУЮЩИЕ ЭФФЕКТЫ ДЛЯ ИЗОБРАЖЕНИЙ */
+/* .meme-image - правило удалено */
+
+/* .meme-img - правило удалено */
+
+/* УБРАНЫ КОНФЛИКТУЮЩИЕ АНИМАЦИИ */
+.meme-card:nth-child(odd):hover {
+    animation: none !important;
+}
+
+.meme-card:nth-child(even):hover {
+    animation: none !important;
+}
+
+/* УБРАНЫ ВСЕ ДОПОЛНИТЕЛЬНЫЕ SHINE ЭФФЕКТЫ */
+.meme-card::after {
+    display: none !important;
+}
+
+.meme-card:hover::after {
+    display: none !important;
+}
+
+/* MOBILE OPTIMIZATIONS */
+@media (max-width: 768px) {
+    .meme-card::before,
+    .meme-card::after {
+        display: none !important;
+    }
+    
+    /* .meme-card:hover - правило удалено для мобильных */
+    
+    .meme-card:nth-child(odd):hover,
+    .meme-card:nth-child(even):hover {
+        animation: none !important;
+    }
+} 
