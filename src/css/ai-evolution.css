@@ -723,4 +723,34 @@
     --rotation: 15deg; 
 }
 
+/* ЭМОДЗИ СТАТУСА КАРТОЧЕК */
+.emoji-status {
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 8px 0 12px 0;
+  line-height: 1;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  animation: emojiPulse 3s ease-in-out infinite;
+  user-select: none;
+  cursor: default;
+}
+
+/* ПУЛЬСИРУЮЩАЯ АНИМАЦИЯ ДЛЯ ЭМОДЗИ */
+@keyframes emojiPulse {
+  0%, 100% { 
+    transform: scale(1);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  }
+  50% { 
+    transform: scale(1.1);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
+  }
+}
+
+/* УСИЛЕННАЯ АНИМАЦИЯ НА HOVER */
+.meme-card:hover .emoji-status {
+  animation: emojiPulse 1.5s ease-in-out infinite;
+  transform: scale(1.2);
+}
+
 
