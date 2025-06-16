@@ -166,17 +166,270 @@
 
 .card-back {
   transform: rotateY(180deg);
-  background: linear-gradient(135deg, 
-    rgba(59, 130, 246, 0.95) 0%,
-    rgba(99, 102, 241, 0.9) 50%,
-    rgba(139, 92, 246, 0.95) 100%);
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 30px;
-  /* ДОБАВЛЯЕМ ТЕНЬ НА ОБРАТНУЮ СТОРОНУ */
+  padding: 25px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 17px;
+  
+  /* БАЗОВАЯ ТЕНЬ */
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* АНИМИРОВАННЫЕ ЧАСТИЦЫ НА ФОНЕ */
+.card-back::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 80%, 
+    rgba(255, 255, 255, 0.1) 1px, 
+    transparent 1px),
+  radial-gradient(circle at 80% 20%, 
+    rgba(255, 255, 255, 0.08) 1px, 
+    transparent 1px),
+  radial-gradient(circle at 40% 40%, 
+    rgba(255, 255, 255, 0.06) 1px, 
+    transparent 1px);
+  background-size: 25px 25px, 35px 35px, 45px 45px;
+  animation: particleFloat 6s linear infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ЭНЕРГЕТИЧЕСКИЕ ВОЛНЫ */
+.card-back::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, 
+    transparent 0deg, 
+    rgba(255, 255, 255, 0.05) 90deg, 
+    transparent 180deg, 
+    rgba(255, 255, 255, 0.03) 270deg, 
+    transparent 360deg);
+  animation: energyRotate 8s linear infinite;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* УНИКАЛЬНЫЕ ГРАДИЕНТЫ ДЛЯ КАЖДОГО УРОВНЯ */
+
+/* КАРТОЧКА 1 - СКЕПТИК (Красно-оранжевый) */
+.meme-card:nth-child(1) .card-back {
+  background: linear-gradient(135deg, 
+    #ff6b6b 0%,
+    #ee5a24 25%,
+    #fd79a8 60%,
+    #e84393 100%);
+  
+  /* Специальные переменные для этого уровня */
+  --particle-color: rgba(255, 107, 107, 0.3);
+  --energy-color: rgba(238, 90, 36, 0.2);
+}
+
+/* КАРТОЧКА 2 - ПЕРВООТКРЫВАТЕЛЬ (Оранжево-желтый) */
+.meme-card:nth-child(2) .card-back {
+  background: linear-gradient(135deg, 
+    #ffa726 0%,
+    #ff7043 30%,
+    #ffb74d 70%,
+    #ffc107 100%);
+    
+  --particle-color: rgba(255, 167, 38, 0.3);
+  --energy-color: rgba(255, 112, 67, 0.2);
+}
+
+/* КАРТОЧКА 3 - ЭКСПЕРИМЕНТАТОР (Желто-зеленый) */
+.meme-card:nth-child(3) .card-back {
+  background: linear-gradient(135deg, 
+    #66bb6a 0%,
+    #4caf50 25%,
+    #8bc34a 60%,
+    #cddc39 100%);
+    
+  --particle-color: rgba(102, 187, 106, 0.3);
+  --energy-color: rgba(76, 175, 80, 0.2);
+}
+
+/* КАРТОЧКА 4 - ПРАКТИК (Зелено-бирюзовый) */
+.meme-card:nth-child(4) .card-back {
+  background: linear-gradient(135deg, 
+    #26a69a 0%,
+    #00acc1 30%,
+    #00bcd4 60%,
+    #4dd0e1 100%);
+    
+  --particle-color: rgba(38, 166, 154, 0.3);
+  --energy-color: rgba(0, 172, 193, 0.2);
+}
+
+/* КАРТОЧКА 5 - МАСТЕР (Сине-фиолетовый) */
+.meme-card:nth-child(5) .card-back {
+  background: linear-gradient(135deg, 
+    #5c6bc0 0%,
+    #7986cb 25%,
+    #9c27b0 60%,
+    #673ab7 100%);
+    
+  --particle-color: rgba(92, 107, 192, 0.3);
+  --energy-color: rgba(121, 134, 203, 0.2);
+}
+
+/* АНИМАЦИИ ЧАСТИЦ И ЭНЕРГИИ */
+@keyframes particleFloat {
+  0% { 
+    background-position: 0px 0px, 0px 0px, 0px 0px;
+    opacity: 0.6;
+  }
+  33% {
+    background-position: 30px 30px, -15px 15px, 20px -10px;
+    opacity: 0.8;
+  }
+  66% {
+    background-position: -20px 40px, 25px -20px, -15px 25px;
+    opacity: 0.7;
+  }
+  100% { 
+    background-position: 0px 0px, 0px 0px, 0px 0px;
+    opacity: 0.6;
+  }
+}
+
+@keyframes energyRotate {
+  0% { 
+    transform: rotate(0deg) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+    opacity: 0.6;
+  }
+  100% { 
+    transform: rotate(360deg) scale(1);
+    opacity: 0.3;
+  }
+}
+
+/* УЛУЧШЕННЫЙ КОНТЕНТ ОБРАТНОЙ СТОРОНЫ */
+.insight-text {
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  animation: fadeInScale 0.6s ease-out;
+  padding: 10px;
+  
+  /* Легкий фон для лучшей читаемости */
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.insight-text h4 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+  
+  /* Анимированный текст */
+  background: linear-gradient(45deg, 
+    rgba(255, 255, 255, 1) 0%, 
+    rgba(255, 255, 255, 0.8) 50%, 
+    rgba(255, 255, 255, 1) 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textShimmer 3s ease-in-out infinite;
+}
+
+.insight-text p {
+  font-size: 1rem;
+  margin: 0 0 15px 0;
+  opacity: 0.95;
+  line-height: 1.3;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+/* УЛУЧШЕННЫЙ ПРОГРЕСС БАР */
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  overflow: hidden;
+  margin-top: 15px;
+  box-shadow: 
+    inset 0 2px 4px rgba(0, 0, 0, 0.3),
+    0 2px 8px rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 15px;
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  
+  /* Динамический градиент в зависимости от карточки */
+  background: linear-gradient(90deg, 
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(255, 255, 255, 0.7) 50%,
+    rgba(255, 255, 255, 0.9) 100%);
+    
+  /* Пульсирующее свечение */
+  box-shadow: 
+    0 0 10px rgba(255, 255, 255, 0.5),
+    inset 0 1px 2px rgba(255, 255, 255, 0.3);
+    
+  animation: progressPulse 2s ease-in-out infinite;
+}
+
+/* АНИМАЦИИ ТЕКСТА И ПРОГРЕССА */
+@keyframes textShimmer {
+  0%, 100% { 
+    background-position: 0% 50%; 
+  }
+  50% { 
+    background-position: 100% 50%; 
+  }
+}
+
+@keyframes progressPulse {
+  0%, 100% { 
+    box-shadow: 
+      0 0 5px rgba(255, 255, 255, 0.3),
+      inset 0 1px 2px rgba(255, 255, 255, 0.2);
+  }
+  50% { 
+    box-shadow: 
+      0 0 15px rgba(255, 255, 255, 0.6),
+      inset 0 1px 2px rgba(255, 255, 255, 0.4);
+  }
+}
+
+/* УСИЛЕННЫЕ HOVER ЭФФЕКТЫ */
+.meme-card:hover .card-back {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Усиливаем анимации при hover */
+.meme-card:hover .card-back::before {
+  animation: particleFloat 3s linear infinite;
+}
+
+.meme-card:hover .card-back::after {
+  animation: energyRotate 4s linear infinite;
 }
 
 /* Изображения мемов с улучшенными фильтрами */
@@ -222,46 +475,7 @@
   }
 }
 
-/* Контент обратной стороны */
-.insight-text {
-  text-align: center;
-  animation: fadeInScale 0.6s ease-out;
-}
-
-.insight-text h4 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin: 0 0 15px 0;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-}
-
-.insight-text p {
-  font-size: 1.1rem;
-  margin: 0 0 20px 0;
-  opacity: 0.9;
-  line-height: 1.4;
-}
-
-/* Прогресс бар с улучшенными эффектами */
-.progress-bar {
-  width: 100%;
-  height: 8px;
-  background: rgba(59, 130, 246, 0.3);
-  border-radius: 10px;
-  overflow: hidden;
-  margin-top: 20px;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.progress-fill {
-  height: 100%;
-  background: linear-gradient(90deg, var(--accent-color, #00ff88), #00ddff);
-  border-radius: 10px;
-  transition: width 0.8s ease-out;
-  /* УБИРАЕМ ДЛИННУЮ ПОЛОСКУ - убираем shine анимацию */
-  position: relative;
-  overflow: hidden;
-}
+/* Старый прогресс бар удален - новая версия выше */
 
 /* УБИРАЕМ ДЛИННУЮ ПОЛОСКУ ПОЛНОСТЬЮ */
 .progress-fill::before {
