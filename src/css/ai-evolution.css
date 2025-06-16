@@ -2,10 +2,10 @@
    AI EVOLUTION БЛОК - CHAOS 3D CARDS
    ================================ */
 
-/* Основной контейнер секции - РАСШИРЕННЫЙ ДО 250vh */
+/* Основной контейнер секции - РАСШИРЕННЫЙ ДО 375vh */
 .ai-evolution-section {
   position: relative;
-  min-height: 250vh; /* УВЕЛИЧЕНО С 100vh ДО 250vh */
+  min-height: 375vh; /* УВЕЛИЧЕНО С 250vh ДО 375vh (+50%) */
   background: linear-gradient(180deg, 
     /* ВЕРХНЯЯ ЧАСТЬ - СВЕТЛАЯ (существующие карточки) */
     #f8fafc 0%, 
@@ -27,6 +27,65 @@
   align-items: center;
   justify-content: flex-start;
   padding: 80px 20px 120px 20px;
+}
+
+/* КРАСИВЫЙ ОБЩИЙ ЭФФЕКТ - ПЛАВАЮЩИЕ ЗВЕЗДОЧКИ */
+.ai-evolution-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 15% 25%, rgba(59, 130, 246, 0.04) 1px, transparent 1px),
+    radial-gradient(circle at 35% 75%, rgba(139, 92, 246, 0.03) 1px, transparent 1px),
+    radial-gradient(circle at 65% 35%, rgba(236, 72, 153, 0.02) 1px, transparent 1px),
+    radial-gradient(circle at 85% 65%, rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+    radial-gradient(circle at 25% 85%, rgba(139, 92, 246, 0.02) 1px, transparent 1px);
+  background-size: 150px 150px, 200px 200px, 120px 120px, 180px 180px, 160px 160px;
+  animation: gentleFloat 20s linear infinite;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.6;
+}
+
+/* ДОПОЛНИТЕЛЬНЫЙ СЛОЙ ЗВЕЗДОЧЕК */
+.ai-evolution-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 45% 15%, rgba(255, 255, 255, 0.02) 0.5px, transparent 0.5px),
+    radial-gradient(circle at 75% 55%, rgba(255, 255, 255, 0.015) 0.5px, transparent 0.5px),
+    radial-gradient(circle at 25% 45%, rgba(255, 255, 255, 0.01) 0.5px, transparent 0.5px);
+  background-size: 80px 80px, 110px 110px, 90px 90px;
+  animation: gentleFloat 30s linear infinite reverse;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.4;
+}
+
+/* АНИМАЦИЯ НЕЖНОГО ПЛАВАНИЯ */
+@keyframes gentleFloat {
+  0% { 
+    background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+  }
+  25% {
+    background-position: 30px 15px, -20px 25px, 15px -10px, 25px 20px, -15px -20px;
+  }
+  50% {
+    background-position: 10px 30px, 40px -15px, -25px 20px, -10px -25px, 35px 10px;
+  }
+  75% {
+    background-position: -20px 10px, 15px 35px, 30px -15px, 40px 15px, -10px 30px;
+  }
+  100% { 
+    background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+  }
 }
 
 /* Фоновые частицы (плавающие эмоджи) */
@@ -93,7 +152,7 @@
 .ai-evolution-middle {
   position: relative;
   width: 100%;
-  height: 75vh;
+  height: 112vh; /* Увеличена пропорционально (+50%) */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -103,31 +162,13 @@
     rgba(51, 65, 85, 0.5) 100%);
 }
 
-/* Мерцающие частицы в средней зоне */
-.ai-evolution-middle::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at 30% 70%, 
-    rgba(59, 130, 246, 0.1) 1px, 
-    transparent 1px),
-  radial-gradient(circle at 70% 30%, 
-    rgba(139, 92, 246, 0.08) 1px, 
-    transparent 1px);
-  background-size: 40px 40px, 60px 60px;
-  animation: middleParticles 8s linear infinite;
-  pointer-events: none;
-  z-index: 1;
-}
+/* Мерцающие эффекты удалены */
 
 /* НИЖНЯЯ ЗОНА - Новые карточки с офферами */
 .ai-evolution-bottom {
   position: relative;
   width: 100%;
-  height: 75vh;
+  height: 112vh; /* Увеличена пропорционально (+50%) */
   display: flex;
   align-items: center;
   justify-content: center;
